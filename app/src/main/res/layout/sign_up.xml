@@ -46,7 +46,8 @@
         android:text="User Name"
         android:textColor="#808080"
         app:layout_constraintTop_toBottomOf="@+id/singUp"
-        tools:layout_editor_absoluteX="42dp" />
+        tools:layout_editor_absoluteX="42dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/singInBtn"
@@ -86,7 +87,8 @@
         android:text="Password"
         android:textColor="#808080"
         tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="453dp" />
+        tools:layout_editor_absoluteY="453dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/confirmPass"

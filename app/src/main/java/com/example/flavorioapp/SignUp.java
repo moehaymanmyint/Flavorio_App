@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class SignUp extends AppCompatActivity {
 
+    ActivitySignUpBinding binding;
+    DatabaseHelper databaseHelper;
     private Button signUp;
 
     @Override
@@ -24,5 +26,8 @@ public class SignUp extends AppCompatActivity {
                 Intent intent = new Intent(SignUp.this, RecipeList.class);
             }
         });
+    }
+
+    private static class ActivitySignUpBinding {
     }
 }

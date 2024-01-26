@@ -10,28 +10,33 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String databaseName = "SignUp.db";
+    public static final String databaseName = "SignIn.db";
 
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "SignUp.db", null, 1);
+
+        super(context, "SignIn.db", null, 1);
     };
 
     @Override
     public void onCreate(SQLiteDatabase MyDatabase) {
-        MyDatabase.execSQL("create Table allusers(email TEXT primary key, password Text)");
+        MyDatabase.execSQL("create Table users (username TEXT primary key, password Text)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase MyDatabase, int i, int i1) {
-        MyDatabase.execSQL("drop Table if exists allusers");
+        MyDatabase.execSQL("drop Table if exists users");
     }
 
-    public boolean insertData(String email, String password){
+    public SQLiteDatabase getMyReadableDatabase(){
+        return this.getReadableDatabase();
+    }
+
+    public boolean insertData(String username, String password, String eml){
         SQLiteDatabase MyDatabase = this.getReadableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("email", email);
+        contentValues.put("username", username);
         contentValues.put("password", password);
-        long result = MyDatabase.insert("allusers", null, contentValues);
+        long result = MyDatabase.insert("users", null, contentValues);
 
         if (result == -1){
             return false;
@@ -40,9 +45,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Boolean checkEmail(String email){
+    public Boolean checkUsername(String username){
         SQLiteDatabase MyDatabase = this.getReadableDatabase();
-        Cursor cursor = MyDatabase.rawQuery("Select * from allusers where email = ?", new String[]{email});
+        Cursor cursor = MyDatabase.rawQuery("Select * from users where username = ?", new String[]{username});
 
         if (cursor.getCount() > 0) {
             return true;
@@ -50,9 +55,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }
     }
-    public boolean checkEmailPassword(String email, String password){
+    public boolean checkUsernamePassword(String username, String password){
         SQLiteDatabase MyDatabase = this.getReadableDatabase();
-        Cursor cursor = MyDatabase.rawQuery("Select * from allusers where email = ? and password = ?", new String[]{email, password});
+        Cursor cursor = MyDatabase.rawQuery("Select * from users where username = ? and password = ?", new String[]{username, password});
 
         if (cursor.getCount() > 0) {
             return true;

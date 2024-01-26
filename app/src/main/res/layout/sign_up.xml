@@ -56,7 +56,7 @@
         android:ems="10"
         android:fontFamily="@font/libre_baskerville"
         android:hint="User Name"
-        android:inputType="numberPassword"
+        android:inputType="text"
         android:paddingLeft="20sp"
         android:textColorHint="#F09127"
         android:drawableLeft="@drawable/username_icon"
@@ -126,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/singUpBtn"
+        android:id="@+id/signUpBtn"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"

@@ -35,6 +35,7 @@ public class SignIn extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

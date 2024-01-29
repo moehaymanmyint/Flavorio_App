@@ -36,6 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
         contentValues.put("password", password);
+        contentValues.put("email", eml);
         long result = MyDatabase.insert("users", null, contentValues);
 
         if (result == -1){

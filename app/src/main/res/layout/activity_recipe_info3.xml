@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeInfo_1">
+    tools:context=".RecipeInfo_3">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,13 +23,13 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/courgette"
-                    android:text="Coconut Chicken Curry\nwith Vegetables"
+                    android:text="Green Curry Shrimp"
                     android:textAlignment="textStart"
                     android:textColor="#F09127"
                     android:textSize="25sp"
@@ -37,32 +38,21 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:text="Coconut Chicken Curry for lunch or dinner \nwould be the best choice for you."
+                    android:text="Green Curry Shrimp might be a suitable \nrecipe for your lunch and dinner."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="175dp"
-                    android:layout_height="175dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/button6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button5"
-                    app:layout_constraintTop_toTopOf="@+id/button4"
-                    app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/chicken" />
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/button7"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
@@ -70,17 +60,17 @@
                     android:drawableLeft="@drawable/time_1"
                     android:fontFamily="sans-serif"
                     android:text="TIME
-                    30mnt"
+                    20mnt"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/button8"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
@@ -88,18 +78,18 @@
                     android:drawableLeft="@drawable/type"
                     android:fontFamily="sans-serif"
                     android:text="TYPE
-                    Easy"
+                    Medium"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/button4"
-                    app:layout_constraintStart_toStartOf="@+id/button4"
-                    app:layout_constraintTop_toBottomOf="@+id/button4" />
+                    app:layout_constraintEnd_toEndOf="@+id/button7"
+                    app:layout_constraintStart_toStartOf="@+id/button7"
+                    app:layout_constraintTop_toBottomOf="@+id/button7" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/button9"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
@@ -112,12 +102,23 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/button5"
-                    app:layout_constraintStart_toStartOf="@+id/button5"
-                    app:layout_constraintTop_toBottomOf="@+id/button5" />
+                    app:layout_constraintEnd_toEndOf="@+id/button8"
+                    app:layout_constraintStart_toStartOf="@+id/button8"
+                    app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="170dp"
+                    android:layout_height="175dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button8"
+                    app:layout_constraintTop_toTopOf="@+id/button7"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/shrimp" />
 
                 <TextView
-                    android:id="@+id/textView15"
+                    android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -144,22 +145,20 @@
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout5"
+                    android:id="@+id/constraintLayout3"
                     android:layout_width="350dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape_1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button6">
+                    app:layout_constraintTop_toBottomOf="@+id/button9">
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/textView11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -173,9 +172,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

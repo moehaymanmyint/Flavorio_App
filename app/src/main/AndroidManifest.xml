@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FlavorioApp"
         tools:targetApi="31">
         <activity
+            android:name=".CakeRecipe_1"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeInfo_3"
+            android:exported="false" />
+        <activity
             android:name=".RecipeInfo_2"
             android:exported="false" />
         <activity

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="393dp"
+    android:layout_height="851dp"
+    tools:context=".RecipeInfo_1">
+
+    <ScrollView
+        android:layout_width="393dp"
+        android:layout_height="1319dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="393dp"
+                android:layout_height="851dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/courgette"
+                    android:text="Coconut Chicken Curry\nwith Vegetables"
+                    android:textAlignment="textStart"
+                    android:textColor="#F09127"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Coconut Chicken Curry for lunch or dinner \nwould be the best choice for you."
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/button6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/button5"
+                    app:layout_constraintTop_toTopOf="@+id/button4"
+                    app:shapeAppearanceOverlay="@style/circular"
+                    app:srcCompat="@drawable/chicken" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/time_1"
+                    android:fontFamily="sans-serif"
+                    android:text="TIME
+                    30mnt"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/type"
+                    android:fontFamily="sans-serif"
+                    android:text="TYPE
+                    Easy"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/button4"
+                    app:layout_constraintStart_toStartOf="@+id/button4"
+                    app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/favourite"
+                    android:fontFamily="sans-serif"
+                    android:text="Favourite"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/button5"
+                    app:layout_constraintStart_toStartOf="@+id/button5"
+                    app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="- 1/2 tsp cumin\n
+- 1/2 tsp cinnamon\n
+- 1/2 tsp ground cloves\n
+- 1/2 tsp ground cardamom\n
+- 1/2 tsp ground black pepper\n
+- 1/2 tsp chili powder\n
+- 1/2 tsp salt\n
+- 1/2 tsp ground turmeric\n
+- 1 lb skinless, boneless chicken breast,\n   cut into 1-inch pieces (you can substitute \n   for thighs)\n
+- 2 Tsp olive oil, divided\n
+- 3/4 cup of chopped onion \n(from one medium onion)\n
+- 5 cloves garlic, minced\n
+- 2 jalapeno peppers, minced \n
+   (remove seeds if you want to cut down \n
+   on heat in dish) \n
+- 114 oz can coconut milk
+- 1 tsp was Worcestershire sauce\n"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_shape_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button6">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Ingredients"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

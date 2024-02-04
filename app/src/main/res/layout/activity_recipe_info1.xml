@@ -68,6 +68,7 @@
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/time_1"
+                    android:paddingLeft="12dp"
                     android:fontFamily="sans-serif"
                     android:text="TIME
                     30mnt"
@@ -86,6 +87,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/type"
+                    android:paddingLeft="12dp"
                     android:fontFamily="sans-serif"
                     android:text="TYPE
                     Easy"
@@ -105,6 +107,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/favourite"
+                    android:paddingLeft="12dp"
                     android:fontFamily="sans-serif"
                     android:text="Favourite"
                     android:textAlignment="center"
@@ -153,6 +156,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape_1"
+                    android:elevation="30dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +166,6 @@
                         android:id="@+id/textView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"
@@ -170,6 +173,7 @@
                         android:textSize="22sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>

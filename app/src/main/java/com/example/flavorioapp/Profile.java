@@ -34,7 +34,7 @@ public class Profile extends AppCompatActivity {
                 return true;
             } else if (item.getItemId() == R.id.bottom_profile) {
                 return true;
-            }
+            } else
             return false;
         });
     }

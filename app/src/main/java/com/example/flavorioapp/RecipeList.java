@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class RecipeList extends AppCompatActivity {
 
     private CardView curryId1;
@@ -15,11 +17,35 @@ public class RecipeList extends AppCompatActivity {
     private CardView curryId3;
     private CardView cakeId1;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "NonConstantResourceId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recipe_list);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_home);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.bottom_home) {
+                return true;
+            } else if (item.getItemId() == R.id.bottom_search) {
+                startActivity(new Intent(getApplicationContext(), Search.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_favourite) {
+                startActivity(new Intent(getApplicationContext(), Favourite.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_profile) {
+                startActivity(new Intent(getApplicationContext(), Profile.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            }
+            return false;
+        });
 
         curryId1 = findViewById(R.id.curryId1);
         curryId1.setOnClickListener(new View.OnClickListener() {

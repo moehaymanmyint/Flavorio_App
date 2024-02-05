@@ -61,17 +61,18 @@
                     app:shapeAppearanceOverlay="@style/circular"
                     app:srcCompat="@drawable/chicken" />
 
-                <Button
+                <TextView
                     android:id="@+id/button4"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape"
+                    android:elevation="30dp"
                     android:drawableLeft="@drawable/time_1"
+                    android:paddingTop="5dp"
                     android:paddingLeft="12dp"
                     android:fontFamily="sans-serif"
-                    android:text="TIME
-                    30mnt"
+                    android:text="Time\n30mnt"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
@@ -80,17 +81,18 @@
                     app:layout_constraintStart_toStartOf="@+id/textView5"
                     app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-                <Button
+                <TextView
                     android:id="@+id/button5"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:elevation="30dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/type"
+                    android:paddingTop="5dp"
                     android:paddingLeft="12dp"
                     android:fontFamily="sans-serif"
-                    android:text="TYPE
-                    Easy"
+                    android:text="TYPE\nEasy"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
@@ -100,13 +102,15 @@
                     app:layout_constraintStart_toStartOf="@+id/button4"
                     app:layout_constraintTop_toBottomOf="@+id/button4" />
 
-                <Button
+                <TextView
                     android:id="@+id/button6"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="16dp"
+                    android:elevation="30dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/favourite"
+                    android:paddingTop="5dp"
                     android:paddingLeft="12dp"
                     android:fontFamily="sans-serif"
                     android:text="Favourite"

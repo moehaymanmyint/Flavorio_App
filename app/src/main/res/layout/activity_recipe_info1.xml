@@ -65,13 +65,13 @@
                     android:id="@+id/button4"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="32dp"
                     android:background="@drawable/bg_shape"
-                    android:elevation="30dp"
                     android:drawableLeft="@drawable/time_1"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="12dp"
+                    android:elevation="10dp"
                     android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
                     android:text="Time\n30mnt"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -85,13 +85,13 @@
                     android:id="@+id/button5"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
-                    android:elevation="30dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/type"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="12dp"
+                    android:elevation="10dp"
                     android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
                     android:text="TYPE\nEasy"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -106,70 +106,61 @@
                     android:id="@+id/button6"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
-                    android:elevation="30dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/favourite"
-                    android:paddingTop="5dp"
-                    android:paddingLeft="12dp"
+                    android:elevation="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Favourite"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="Add to\nFavourite"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/button5"
                     app:layout_constraintStart_toStartOf="@+id/button5"
                     app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-                <TextView
-                    android:id="@+id/textView15"
+                <WebView
+                    android:id="@+id/webView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
-                    android:text=" - 1/2 tsp cumin\n\n
-- 1/2 tsp cinnamon\n\n
-- 1/2 tsp ground cloves\n\n
-- 1/2 tsp ground cardamom\n\n
-- 1/2 tsp ground black pepper\n\n
-- 1/2 tsp chili powder\n\n
-- 1/2 tsp salt\n\n
-- 1/2 tsp ground turmeric\n\n
-- 1 lb skinless, boneless chicken breast,\n   cut into 1-inch pieces (you can substitute \n   for thighs)\n\n
-- 2 Tsp olive oil, divided\n\n
-- 3/4 cup of chopped onion \n   (from one medium onion)\n\n
-- 5 cloves garlic, minced\n\n
-- 2 jalapeno peppers, minced \n\n
-  (remove seeds if you want to cut down \n\n
-   on heat in dish) \n\n
-- 114 oz can coconut milk\n\n
-- 1 tsp Worcestershire sauce\n\n"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout5"
                     android:layout_width="350dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_1"
                     android:elevation="30dp"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/button6"
                     app:layout_constraintTop_toBottomOf="@+id/button6">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="40dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"
@@ -178,7 +169,7 @@
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,5 +1,6 @@
 package com.example.flavorioapp;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -56,14 +57,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }
     }
-    public boolean checkUsernamePassword(String username, String password){
+    public boolean checkUsernamePassword(String username, String password) {
         SQLiteDatabase MyDatabase = this.getReadableDatabase();
-        Cursor cursor = MyDatabase.rawQuery("Select * from users where username = ? and password = ?", new String[]{username, password});
+
+        Cursor cursor = MyDatabase.rawQuery("SELECT * FROM users WHERE username = ?", new String[]{username});
 
         if (cursor.getCount() > 0) {
-            return true;
-        } else {
-            return false;
+            cursor.moveToFirst();
+            @SuppressLint("Range")
+            String storedPassword = cursor.getString(cursor.getColumnIndex("password"));
+
+            if (password.equals(storedPassword)) {
+                cursor.close();
+                return true;
+            }
         }
+
+        cursor.close();
+        return false;
     }
 }

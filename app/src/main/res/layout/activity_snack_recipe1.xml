@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeInfo_1">
+    tools:context=".SnackRecipe_1">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,13 +20,13 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="@font/courgette"
-                    android:text="Coconut Chicken Curry\nwith Vegetables"
+                    android:text="Slow Cooker Pulled\nBBQ Chicken"
                     android:textAlignment="textStart"
                     android:textColor="#F09127"
                     android:textSize="25sp"
@@ -37,34 +35,34 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textView23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:text="Coconut Chicken Curry for lunch or dinner \nwould be the best choice for you."
+                    android:text="This Chicken Burger recipe will be the \nbest companion for your snack time."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintStart_toStartOf="@+id/textView22"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
                 <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView10"
                     android:layout_width="175dp"
                     android:layout_height="175dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/button6"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button5"
-                    app:layout_constraintTop_toTopOf="@+id/button4"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView26"
+                    app:layout_constraintStart_toStartOf="@+id/textView23"
+                    app:layout_constraintTop_toTopOf="@+id/textView24"
                     app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/chicken" />
+                    app:srcCompat="@drawable/snack1" />
 
                 <TextView
-                    android:id="@+id/button4"
+                    android:id="@+id/textView24"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/time_1"
@@ -72,17 +70,17 @@
                     android:fontFamily="sans-serif"
                     android:paddingLeft="12dp"
                     android:paddingTop="5dp"
-                    android:text="Time\n30mnt"
+                    android:text="Time\n20mnt"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                    app:layout_constraintStart_toEndOf="@+id/imageView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
                 <TextView
-                    android:id="@+id/button5"
+                    android:id="@+id/textView25"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
@@ -98,12 +96,12 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/button4"
-                    app:layout_constraintStart_toStartOf="@+id/button4"
-                    app:layout_constraintTop_toBottomOf="@+id/button4" />
+                    app:layout_constraintEnd_toEndOf="@+id/textView24"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
                 <TextView
-                    android:id="@+id/button6"
+                    android:id="@+id/textView26"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
@@ -119,12 +117,12 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/button5"
-                    app:layout_constraintStart_toStartOf="@+id/button5"
-                    app:layout_constraintTop_toBottomOf="@+id/button5" />
+                    app:layout_constraintEnd_toEndOf="@+id/textView25"
+                    app:layout_constraintStart_toStartOf="@+id/textView25"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
                 <WebView
-                    android:id="@+id/webView1"
+                    android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -132,34 +130,25 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout8"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout4"
+                    android:id="@+id/constraintLayout8"
                     android:layout_width="350dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_1"
                     android:elevation="30dp"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/webView">
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/fork_and_spoon_1" />
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
+                    app:layout_constraintTop_toBottomOf="@+id/wb_bbqingredients">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/textView30"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="40dp"
+                        android:layout_marginEnd="45dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Instructions"
                         android:textAlignment="center"
@@ -168,34 +157,11 @@
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView7"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
                         app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <WebView
-                    android:id="@+id/webView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout5"
-                    android:layout_width="350dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/bg_shape_1"
-                    android:elevation="30dp"
-                    app:layout_constraintStart_toStartOf="@+id/button6"
-                    app:layout_constraintTop_toBottomOf="@+id/button6">
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/imageView12"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="16dp"
@@ -203,12 +169,35 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/fork_and_spoon_1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <WebView
+                    android:id="@+id/wb_bbqingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_shape_1"
+                    android:elevation="30dp"
+                    app:layout_constraintStart_toStartOf="@+id/imageView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26">
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/textView27"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="40dp"
+                        android:layout_marginEnd="45dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"
@@ -217,12 +206,20 @@
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintStart_toEndOf="@+id/imageView11"
                         app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

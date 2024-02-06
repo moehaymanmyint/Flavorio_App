@@ -52,32 +52,117 @@
                     android:id="@+id/imageView5"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="32dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView16"
                     app:srcCompat="@drawable/chocolate" />
 
                 <TextView
-                    android:id="@+id/textView18"
+                    android:id="@+id/textView19"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/time_1"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="Time\n30mnt"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/type"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="TYPE\nEasy"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="@+id/textView16"
+                    app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/favourite"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="Add to\nFavourite"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView20"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_shape_2"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                    app:layout_constraintTop_toBottomOf="@+id/webview_chocolate">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="45dp"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Instructions"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView9"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <WebView
+                    android:id="@+id/webview_chocolate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif"
-                    android:text="- 1 3/4 cups all purpose flour, or (plain flour),\n
- (8 oz | 227 g)\n\n
-- 3/4 cup unsweetened cocoa powder, \n\n
- (2.6 oz | 75 g) or regular Hershey's cocoa powder\n\n
-- 1 1/2 teaspoon baking powder\n\n
-- 1 1/2 teaspoon baking soda,\n
-  (or bi-carb soda)\n\n
-- 1 teaspoon salt\n\n
-- 2 cups white granulated sugar, (14 oz | 410 g)\n\n
-- 2 large eggs\n\n
-- 1 cup milk, (250 ml)\n\n
-- 1/2 cup vegetable oil, (125 ml)\n\n
-- 2 teaspoons pure vanilla extract\n\n
-- 1 cup boiling water (250 ml)\n\n"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -89,16 +174,27 @@
                     android:id="@+id/constraintLayout2"
                     android:layout_width="350dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5">
+                    app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
 
                     <TextView
                         android:id="@+id/textView17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="45dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"
@@ -107,7 +203,7 @@
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView8"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

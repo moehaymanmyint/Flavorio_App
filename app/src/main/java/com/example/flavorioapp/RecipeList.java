@@ -17,7 +17,6 @@ public class RecipeList extends AppCompatActivity {
     private CardView curryId3;
     private CardView cakeId1;
 
-    @SuppressLint({"MissingInflatedId", "NonConstantResourceId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

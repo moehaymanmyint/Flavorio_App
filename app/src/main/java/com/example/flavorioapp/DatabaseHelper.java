@@ -33,18 +33,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean insertData(String username, String password, String eml){
-        SQLiteDatabase MyDatabase = this.getReadableDatabase();
+        SQLiteDatabase MyDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username", username);
         contentValues.put("password", password);
         contentValues.put("email", eml);
         long result = MyDatabase.insert("users", null, contentValues);
 
-        if (result == -1){
-            return false;
-        } else {
-            return true;
-        }
+        return result != -1;
     }
 
     public Boolean checkUsername(String username){

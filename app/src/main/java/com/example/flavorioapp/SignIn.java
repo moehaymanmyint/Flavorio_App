@@ -42,9 +42,9 @@ public class SignIn extends AppCompatActivity {
                 String user = username.getText().toString();
                 String pass = password.getText().toString();
 
-                if (user.equals("") || pass.equals(""))
+                if (user.equals("") || pass.equals("")) {
                     Toast.makeText(SignIn.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
-                else {
+                } else {
                     Boolean checkUserPass = databaseHelper.checkUsernamePassword(user, pass);
                         if (checkUserPass == true){
                             Toast.makeText(SignIn.this, "Sign In Successfull", Toast.LENGTH_SHORT).show();

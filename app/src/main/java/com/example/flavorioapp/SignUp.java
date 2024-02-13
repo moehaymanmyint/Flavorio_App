@@ -18,17 +18,16 @@ public class SignUp extends AppCompatActivity {
     Button signUpBtn;
     DatabaseHelper databaseHelper;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
 
-        username = (EditText) findViewById(R.id.username);
-        email = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.password);
-        confirmPass = (EditText) findViewById(R.id.confirmPass);
-        signUpBtn = (Button) findViewById(R.id.signUpBtn);
+        username = findViewById(R.id.username);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        confirmPass = findViewById(R.id.confirmPass);
+        signUpBtn = findViewById(R.id.signUpBtn);
 
         databaseHelper = new DatabaseHelper(this);
 

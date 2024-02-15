@@ -2,31 +2,57 @@ package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
 public class Profile extends AppCompatActivity {
 
-    Button favourite_btn;
+    Button home_btn, logout_btn;
+    TextView user_name;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
 
-        favourite_btn = findViewById(R.id.favourite_btn);
+        home_btn = findViewById(R.id.home_btn);
+        logout_btn = findViewById(R.id.logout_btn);
+        user_name = findViewById(R.id.user_name);
 
-        favourite_btn.setOnClickListener(new View.OnClickListener() {
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("USERNAME")) {
+            String username = intent.getStringExtra("USERNAME");
+            user_name.setText("Welcome, \n" + username);
+        } else {
+            user_name.setText("Unable to retrieve username");
+        }
+
+        logout_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this , Favourite.class);
+                Intent intent = new Intent(Profile.this , SignIn.class);
                 startActivity(intent);
             }
         });
+
+        home_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this , RecipeList.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_profile);

@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "user.db";
@@ -69,4 +71,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         }
     }
+
+    public String getUsernameById(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] columns = {COL_2};
+        String selection = COL_1 + " = ?";
+        String[] selectionArgs = {String.valueOf(id)};
+        Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            String username = cursor.getString(cursor.getColumnIndex(COL_2));
+            cursor.close();
+            return username;
+        } else {
+            return null;
+        }
+    }
+
 }

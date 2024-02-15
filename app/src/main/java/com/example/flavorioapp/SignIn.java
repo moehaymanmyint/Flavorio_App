@@ -47,8 +47,9 @@ public class SignIn extends AppCompatActivity {
                 } else {
                     Boolean checkUserPass = databaseHelper.checkUsernamePassword(user, pass);
                         if (checkUserPass == true){
-                            Toast.makeText(SignIn.this, "Sign In Successfull", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), RecipeList.class);
+                            Toast.makeText(SignIn.this, "Sign In Successfully", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(SignIn.this, Profile.class);
+                            intent.putExtra("USERNAME", user);
                             startActivity(intent);
                         } else {
                             Toast.makeText(SignIn.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();

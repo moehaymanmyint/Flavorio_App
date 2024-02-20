@@ -1,3 +1,123 @@
 <resources>
     <string name="app_name">Flavorio App</string>
+
+    <string name="curry1_description">Coconut Chicken Curry for lunch or\ndinner would be the best choice\nfor you.</string>
+
+    <string name="curry1_ingredients">\t- 2 Tablespoons vegetable oil\n
+- 1 - 2 lbs boneless, skinless chicken\n\t\tbreasts cut into strips\n
+- Kosher salt\n
+- 1 onion diced\n
+- 1 red bell pepper cut into strips\n
+- 1 cup sliced mushrooms\n
+- 2 cloves garlic minced\n
+- 2 Tablespoons grated fresh ginger\n
+- 2 Tablespoons curry powder\n
+- 1 Tablespoon granulated sugar\n
+- Pinch red pepper flakes (optional)\n
+- 1 13.5 ounce can full-fat coconut\n\t\t milk\n
+- 1 cup chicken stock or water\n
+- 1 cup snow peas\n
+- 2 - 3 handfuls baby spinach\n
+- Juice of one lime\n
+- White or brown rice for serving
+</string>
+
+    <string name="curry1_instructions"> 1. Heat the oil in a large skillet\n over medium heat. Season the\n
+        chicken with salt. Working in two\n batches, brown the chicken on all\n sides, about 5 minutes total. Transfer\n
+        the chicken to a plate.\n\n
+2. Add the onion, bell pepper, and\n mushrooms to the skillet. Cook,\n stirring, until the vegetables have\n
+        softened and the onion is\n translucent, about 5 minutes. Add the\n garlic and ginger and cook for\n
+        30 seconds. Add the curry powder,\n sugar, and red pepper flakes\n (if using), and stir to combine.\n\n
+3. Stir in the coconut milk and\n chicken stock. Return the chicken\n and any juices to the skillet.\n
+        Simmer until the chicken is cooked\n through, about 5 minutes. Stir in\n the snow peas and spinach and\n
+        cook until the snow peas are\n bright green and the spinach has\n wilted, 2 to 3 minutes. Remove\n
+        from the heat and stir in\n the lime juice.\n\n
+4. Serve over rice.\n\n
+</string>
+
+    <string name="cake1_description">This chocolate cake recipe will \ndefinitely win your heart.</string>
+
+    <string name="cake1_ingredients">For the cake\n
+- 200g golden caster sugar\n
+- 200g unsalted butter, softened plus\n\t\textra for the tins\n
+- 4 large eggs\n
+- 200g self-raising flour\n
+- 2 tbsp cocoa powder\n
+- 1 tsp baking powder\n
+- ½ tsp vanilla extract\n
+- 2 tbsp milk\n\n
+For the buttercream\n
+- 100g milk chocolate, chopped\n
+- 200g butter, softened\n
+- 400g icing sugar\n
+- 5 tbsp cocoa powder\n
+- 2 tbsp milk\n\n
+For the chocolate shards (optional)\n
+- 50g dark chocolate\n
+- 25g milk chocolate\n
+- 25g white chocolate\n
+</string>
+
+    <string name="cake1_instructions">1. Heat oven to 190C/170C fan/gas 5.\n Butter the base and sides of\n
+        two 20cm round sandwich tins and\n line the bases with baking\n parchment.\n\n
+    2. In a large bowl, beat together\n 200g golden caster sugar, 200g\n softened unsalted butter, 4 large eggs,\n
+        200g self-raising flour, 2 tbsp\n cocoa powder, 1 tsp baking powder,\n ½ tsp vanilla extract, 2 tbsp\n
+        milk and a pinch of salt\n until pale.\n\n
+        3. Divide the mixture between the\n prepared tins. Bake for 20 mins\n or until a skewer inserted into\n
+        the centre of the cake comes\n out clean.\n\n
+        4. Leave to cool in the tin\n for 10 mins, then turn out\n onto a wire rack to cool\n completely.\n\n
+        5. For the buttercream, put 100g\n chopped milk chocolate in a\n  heatproof bowl and melt in the\n
+        microwave, stirring every 30 secs.\n Leave the melted chocolate to cool\n for 5 mins.\n\n
+        6. Mash 200g softened butter and\n 400g icing sugar together with\n a fork, then switch to a\n
+        wooden spoon or electric beaters,\n if you have them.\n\n
+        7. Sift in 5 tbsp cocoa powder\n with a pinch of salt and\n pour in the melted chocolate\n
+        and 2 tbsp milk. Mix again\n until smooth.\n\n
+        8. On a cake stand or large\n plate, sandwich the cakes together\n with half of the buttercream,\n
+        then spread the rest on top.\n Decorate with chocolate shards, if\n you like.\n\n
+        9. To make chocolate shards: melt\n 50g dark chocolate and pour it\n onto a tray lined with baking\n parchment or foil.\n\n
+        10. Now melt 25g milk chocolate\n and 25g white chocolate and\n drizzle them over the dark\n chocolate before it sets.\n\n
+        11. Shake the tray gently to level\n the mixture then leave to set\n somewhere cool. Chop into shards.\n\n
+</string>
+
+    <string name="snack1_descripton">This Chicken Burger recipe will be \nthe best companion for your \nsnack time.</string>
+    <string name="snack1_ingredients">- 4 skinless, boneless chicken\n\t\tbreasts\n
+- 4 large burger buns, sliced in half\n
+- lettuce, tomato and red onion,\n\t\tto serve\n\n
+For the sauce and marinade\n
+- 4 tbsp tomato ketchup\n
+- 4 tbsp brown sauce\n
+- splash chilli sauce (optional)\n
+- 2 tsp clear honey\n
+- 2 garlic cloves, crushed
+</string>
+
+    <string name="snack1_instructions">1. Make the sauce and marinade\n by mixing everything together in\n
+        a large bowl, then put a\n few spoonfuls aside. Slice halfway\n into the thickest part of\n
+        each breast and open it up\n like a book. Flatten down\n slightly with your hand, then toss\n
+        in the bowlful of marinade\n to coat. Chill for as little,\n or as long, as you have\n
+        time to.\n\n
+        2. Barbecue the chicken for about\n 10 mins until completely cooked\n through, turning so it doesn’t\n
+        burn but is nicely charred\n and sticky. Cook the bacon\n at the same time until crisp,\n if using, and toast the buns.\n
+        Assemble the burgers with lettuce,\n slices of tomato, onion and\n the reserved sauce on the\n side for dolloping on top.\n\n
+</string>
+
+    <string name="drink1_description">No one can say no to\n a cup of hot chocolate smoothie.</string>
+
+    <string name="drink1_ingredients">- 1 cup Eggnog\n
+- 1 cup Whole Milk\n
+- 2 tablespoon Unsweetened\n\t\t Cocoa Powder\n
+- 2 tablespoons Granulated Sugar\n
+- 1 teaspoon Vanilla Extract\n
+- ¼ teaspoon Ground Nutmeg\n
+- ¼ teaspoon Salt\n
+- Whipped Cream (for topping,\n\t\t optional)\n
+- Ground Cinnamon (or nutmeg\n\t\t for topping, optional)
+</string>
+
+    <string name="drink1_instructions">1. Add all ingredients to a\n small saucepan and whisk together\n until combined.\n\n
+2. Cook over medium-high heat\n until the sugar has dissolved\n completely and it barely comes\n to a light simmer.\n\n
+3. Remove the saucepan from heat\n and divide between two mugs.\n\n
+4. Top with whipped cream and\n cinnamon or nutmeg if desired.\n\n
+</string>
+
 </resources>

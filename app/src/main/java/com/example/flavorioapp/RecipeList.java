@@ -16,6 +16,8 @@ public class RecipeList extends AppCompatActivity {
     private CardView curryId2;
     private CardView curryId3;
     private CardView cakeId1;
+    private CardView snackId1;
+    private CardView drinkId1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +79,22 @@ public class RecipeList extends AppCompatActivity {
                 openCakeRecipe1();
             }
         });
+
+        snackId1 = findViewById(R.id.snackId1);
+        snackId1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSnackRecipe1();
+            }
+        });
+
+        drinkId1 = findViewById(R.id.drinkId1);
+        drinkId1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDrinkRecipe1();
+            }
+        });
     }
 
     public void openRecipeInfo1() {
@@ -97,5 +115,15 @@ public class RecipeList extends AppCompatActivity {
     public void openCakeRecipe1() {
         Intent intent = new Intent (this, CakeRecipe_1.class);
         startActivity(new Intent(RecipeList.this, CakeRecipe_1.class));
+    }
+
+    public void openSnackRecipe1() {
+        Intent intent = new Intent (this, SnackRecipe_1.class);
+        startActivity(new Intent(RecipeList.this, SnackRecipe_1.class));
+    }
+
+    public void openDrinkRecipe1() {
+        Intent intent = new Intent (this, DrinkRecipe_1.class);
+        startActivity(new Intent(RecipeList.this, DrinkRecipe_1.class));
     }
 }

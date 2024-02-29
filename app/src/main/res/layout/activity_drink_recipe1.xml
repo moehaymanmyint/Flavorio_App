@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:text="No one can say 'no' to a cup of hot \nchocolate smoothie."
+                    android:text="@string/drink1_description"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -114,21 +114,23 @@
                     android:id="@+id/imageView13"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    app:shapeAppearanceOverlay="@style/circular"
                     app:layout_constraintBottom_toBottomOf="@+id/textView34"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.448"
                     app:layout_constraintStart_toEndOf="@+id/textView33"
                     app:layout_constraintTop_toTopOf="@+id/textView32"
                     app:layout_constraintVertical_bias="0.714"
+                    app:shapeAppearanceOverlay="@style/circular"
                     app:srcCompat="@drawable/drink1" />
 
-                <WebView
-                    android:id="@+id/wb_hotrecipe"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/drink1_instructions"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -138,18 +140,19 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout10"
-                    android:layout_width="350dp"
+                    android:layout_width="345dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_2"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout9"
                     app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
-                    app:layout_constraintTop_toBottomOf="@+id/wb_hotingredients">
+                    app:layout_constraintTop_toBottomOf="@id/textView36">
 
                     <TextView
                         android:id="@+id/textView38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="45dp"
+                        android:layout_marginEnd="24dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Instructions"
                         android:textAlignment="center"
@@ -172,12 +175,15 @@
                         app:srcCompat="@drawable/fork_and_spoon_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <WebView
-                    android:id="@+id/wb_hotingredients"
+                <TextView
+                    android:id="@+id/textView36"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="15dp"
+                    android:text="@string/drink1_ingredients"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -187,12 +193,13 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout9"
-                    android:layout_width="350dp"
+                    android:layout_width="345dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
+                    android:layout_marginEnd="8dp"
                     android:background="@drawable/bg_shape_2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                    app:layout_constraintStart_toStartOf="@+id/textView34"
                     app:layout_constraintTop_toBottomOf="@+id/textView34">
 
                     <ImageView
@@ -209,7 +216,7 @@
                         android:id="@+id/textView35"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="45dp"
+                        android:layout_marginEnd="24dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"

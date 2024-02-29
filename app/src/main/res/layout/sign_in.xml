@@ -106,7 +106,7 @@
     <Button
         android:id="@+id/singUpNowBtn"
         android:layout_width="319dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:background="@drawable/rounded_btn"
         android:fontFamily="@font/libre_baskerville"
         android:text="Sign Up Now"

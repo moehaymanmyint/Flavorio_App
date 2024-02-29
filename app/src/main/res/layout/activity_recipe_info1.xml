@@ -42,13 +42,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:text="Coconut Chicken Curry for lunch or dinner \nwould be the best choice for you."
+                    android:text="@string/curry1_description"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintStart_toStartOf="@id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imageView4"
@@ -123,11 +123,14 @@
                     app:layout_constraintStart_toStartOf="@+id/button5"
                     app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-                <WebView
-                    android:id="@+id/webView1"
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/curry1_instructions"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -137,13 +140,14 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout4"
-                    android:layout_width="350dp"
+                    android:layout_width="345dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_1"
                     android:elevation="30dp"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/webView">
+                    app:layout_constraintTop_toBottomOf="@id/textView6"
+                    app:layout_constraintStart_toStartOf="@id/constraintLayout5"
+                    app:layout_constraintEnd_toEndOf="@id/constraintLayout5">
 
                     <ImageView
                         android:id="@+id/imageView7"
@@ -159,7 +163,7 @@
                         android:id="@+id/textView15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="40dp"
+                        android:layout_marginEnd="24dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Instructions"
                         android:textAlignment="center"
@@ -172,11 +176,15 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <WebView
-                    android:id="@+id/webView"
+                <TextView
+                    android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="15dp"
+                    android:text="@string/curry1_ingredients"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -186,11 +194,12 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout5"
-                    android:layout_width="350dp"
+                    android:layout_width="345dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_1"
                     android:elevation="30dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView4"
                     app:layout_constraintStart_toStartOf="@+id/button6"
                     app:layout_constraintTop_toBottomOf="@+id/button6">
 
@@ -208,7 +217,7 @@
                         android:id="@+id/textView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="40dp"
+                        android:layout_marginEnd="24dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"

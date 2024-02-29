@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/exploreBtn"
         android:layout_width="150dp"
-        android:layout_height="44dp"
+        android:layout_height="50dp"
         android:background="@drawable/rounded_btn"
         android:fontFamily="@font/libre_baskerville"
         android:text="Let's Explore"
@@ -63,5 +63,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tagline"
         app:layout_constraintVertical_bias="0.338" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_btn"
+        android:fontFamily="@font/libre_baskerville"
+        android:text="Add Recipe"
+        android:textColor="#F09127"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exploreBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

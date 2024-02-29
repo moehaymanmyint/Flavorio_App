@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:text="This chocolate cake recipe will definitely \nwin your heart."
+                    android:text="@string/cake1_description"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -52,7 +52,7 @@
                     android:id="@+id/imageView5"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="32dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView16"
@@ -62,8 +62,8 @@
                     android:id="@+id/textView19"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/time_1"
                     android:elevation="10dp"
@@ -76,14 +76,14 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
                 <TextView
                     android:id="@+id/textView20"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="40dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/type"
                     android:elevation="10dp"
@@ -97,7 +97,7 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/textView19"
-                    app:layout_constraintEnd_toEndOf="@+id/textView16"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/textView19" />
 
                 <TextView
@@ -121,12 +121,15 @@
                     app:layout_constraintStart_toStartOf="@+id/textView19"
                     app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
-                <WebView
+                <TextView
                     android:id="@+id/webview_chocorecipe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/cake1_instructions"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -141,7 +144,7 @@
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_2"
                     app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
-                    app:layout_constraintTop_toBottomOf="@+id/webview_chocolate">
+                    app:layout_constraintTop_toBottomOf="@id/textView15">
 
                     <TextView
                         android:id="@+id/textView18"
@@ -170,12 +173,15 @@
                         app:srcCompat="@drawable/fork_and_spoon_1" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <WebView
-                    android:id="@+id/webview_chocolate"
+                <TextView
+                    android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="15dp"
+                    android:text="@string/cake1_ingredients"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -185,9 +191,10 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout2"
-                    android:layout_width="350dp"
+                    android:layout_width="345dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
+                    android:elevation="30dp"
                     android:background="@drawable/bg_shape_2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +214,7 @@
                         android:id="@+id/textView17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="45dp"
+                        android:layout_marginEnd="24dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"

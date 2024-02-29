@@ -189,7 +189,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(id)};
         Cursor cursor = db.query(TABLE_NAME, columns, selection, selectionArgs, null, null, null);
         if (cursor != null && cursor.moveToFirst()) {
-            @SuppressLint("Range")
             String username = cursor.getString(cursor.getColumnIndex(COL_2));
             cursor.close();
             return username;

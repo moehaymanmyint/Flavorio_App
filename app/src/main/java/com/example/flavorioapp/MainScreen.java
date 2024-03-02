@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class MainScreen extends AppCompatActivity {
 
-    private Button button, button1;
+    private Button button;
 
     //Variables
     ImageView logoImg;
@@ -32,7 +32,6 @@ public class MainScreen extends AppCompatActivity {
         setContentView(R.layout.main_screen);
 
         button = findViewById(R.id.exploreBtn);
-        button1 = findViewById(R.id.addBtn);
 
         //Hooks
         logoImg = findViewById(R.id.logoImg);
@@ -54,14 +53,6 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainScreen.this, SignIn.class);
-                startActivity(intent);
-            }
-        });
-
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainScreen.this, RecipeTable.class);
                 startActivity(intent);
             }
         });

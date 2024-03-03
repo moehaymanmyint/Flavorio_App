@@ -7,6 +7,11 @@
         android:title="Home" />
 
     <item
+        android:id="@+id/bottom_daily_meal"
+        android:icon="@drawable/recipe"
+        android:title="Recipe List" />
+
+    <item
         android:id="@+id/bottom_favourite"
         android:icon="@drawable/favorite_navbar"
         android:title="Favourite" />

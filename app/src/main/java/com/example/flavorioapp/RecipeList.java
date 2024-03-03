@@ -2,6 +2,8 @@ package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -29,6 +31,14 @@ public class RecipeList extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             if (item.getItemId() == R.id.bottom_home) {
                 return true;
+            } else if (item.getItemId() == R.id.bottom_daily_meal) {
+                DailyMealFragment dailyMealFragment = new DailyMealFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, dailyMealFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+                return true;
             } else if (item.getItemId() == R.id.bottom_search) {
                 startActivity(new Intent(getApplicationContext(), Search.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -45,7 +55,7 @@ public class RecipeList extends AppCompatActivity {
                 finish();
                 return true;
             } else
-            return false;
+                return false;
         });
 
         curryId1 = findViewById(R.id.curryId1);

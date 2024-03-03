@@ -1,6 +1,8 @@
 package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,7 +20,6 @@ public class Profile extends AppCompatActivity {
     Button home_btn, logout_btn;
     TextView user_name;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +53,6 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_profile);
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -61,6 +60,14 @@ public class Profile extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RecipeList.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_daily_meal) {
+                DailyMealFragment dailyMealFragment = new DailyMealFragment();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, dailyMealFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 return true;
             } else if (item.getItemId() == R.id.bottom_search) {
                 startActivity(new Intent(getApplicationContext(), Search.class));

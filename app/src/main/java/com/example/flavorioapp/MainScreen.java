@@ -1,6 +1,8 @@
 package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,7 +17,6 @@ import android.widget.TextView;
 
 public class MainScreen extends AppCompatActivity {
 
-    private Button button;
 
     //Variables
     ImageView logoImg;
@@ -25,19 +26,17 @@ public class MainScreen extends AppCompatActivity {
     //Animation
     Animation sideAnim, bottomAnim;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_screen);
-
-        button = findViewById(R.id.exploreBtn);
+        
+        exploreBtn = findViewById(R.id.exploreBtn);
 
         //Hooks
         logoImg = findViewById(R.id.logoImg);
         appName = findViewById(R.id.appName);
         tagline = findViewById(R.id.tagline);
-        exploreBtn = findViewById(R.id.exploreBtn);
 
         //Animations
         sideAnim = AnimationUtils.loadAnimation(this,R.anim.side_anim);
@@ -49,7 +48,7 @@ public class MainScreen extends AppCompatActivity {
         exploreBtn.setAnimation(bottomAnim);
         tagline.setAnimation(bottomAnim);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        exploreBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainScreen.this, SignIn.class);

@@ -16,7 +16,7 @@
             android:name=".DetailedDailyMealActivity"
             android:exported="false" />
         <activity
-            android:name=".DailyMealFragment"
+            android:name=".DailyMealActivity"
             android:exported="false" />
         <activity
             android:name=".DrinkRecipe_1"

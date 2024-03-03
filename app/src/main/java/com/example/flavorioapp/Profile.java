@@ -62,12 +62,9 @@ public class Profile extends AppCompatActivity {
                 finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_daily_meal) {
-                DailyMealFragment dailyMealFragment = new DailyMealFragment();
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, dailyMealFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                startActivity(new Intent(getApplicationContext(), DailyMealActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_search) {
                 startActivity(new Intent(getApplicationContext(), Search.class));

@@ -1,13 +1,18 @@
 package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Search extends AppCompatActivity {
 
@@ -25,12 +30,9 @@ public class Search extends AppCompatActivity {
                 finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_daily_meal) {
-                DailyMealFragment dailyMealFragment = new DailyMealFragment();
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, dailyMealFragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                startActivity(new Intent(getApplicationContext(), DailyMealActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_search) {
                 return true;
@@ -45,7 +47,7 @@ public class Search extends AppCompatActivity {
                 finish();
                 return true;
             } else
-            return false;
+                return false;
         });
     }
 }

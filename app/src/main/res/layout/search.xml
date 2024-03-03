@@ -51,6 +51,7 @@
         app:layout_constraintVertical_bias="0.125">
 
         <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
             android:layout_width="339dp"
             android:layout_height="47dp"
             android:background="@drawable/search_bg"
@@ -60,13 +61,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:queryHint="Search Recipe" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:queryHint="Search Recipe"
+            tools:ignore="InvalidId" />
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"

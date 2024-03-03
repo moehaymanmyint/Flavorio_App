@@ -4,13 +4,11 @@ public class DailyMealModel {
 
     int image;
     String name;
-    String type;
     String description;
 
-    public DailyMealModel(int image, String name, String type, String description) {
+    public DailyMealModel(int image, String name, String description) {
         this.image = image;
         this.name = name;
-        this.type = type;
         this.description = description;
     }
 
@@ -28,14 +26,6 @@ public class DailyMealModel {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getDescription() {

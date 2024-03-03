@@ -28,13 +28,13 @@ public class DailyMealFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         dailyMealModels = new ArrayList<>();
 
-        dailyMealModels.add(new DailyMealModel(R.drawable.chocolate,"Chocolate Cake","Dessert","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.shrimp,"Shrimp Recipe","Dessert","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Dessert","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Dessert","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack3,"Snacks","Dessert","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.drink1,"Drink","Dessert","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.drink2,"Drink","Dessert","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.chocolate,"Chocolate Cake","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.shrimp,"Shrimp Recipe","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack3,"Snacks","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.drink1,"Drink","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.drink2,"Drink","Description Description Description"));
 
         dailyMealAdapter = new DailyMealAdapter(getContext(), dailyMealModels);
         recyclerView.setAdapter(dailyMealAdapter);

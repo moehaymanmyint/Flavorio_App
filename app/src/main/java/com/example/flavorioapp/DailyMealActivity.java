@@ -2,12 +2,12 @@ package com.example.flavorioapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +16,7 @@ public class DailyMealActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     List<DailyMealModel> dailyMealModels;
     DailyMealAdapter dailyMealAdapter;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +49,6 @@ public class DailyMealActivity extends AppCompatActivity {
                 return true;
             } else if (item.getItemId() == R.id.bottom_daily_meal) {
                 return true;
-            } else if (item.getItemId() == R.id.bottom_search) {
-                startActivity(new Intent(getApplicationContext(), Search.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
             } else if (item.getItemId() == R.id.bottom_favourite) {
                 startActivity(new Intent(getApplicationContext(), Favourite.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -65,6 +61,22 @@ public class DailyMealActivity extends AppCompatActivity {
                 return true;
             } else
                 return false;
+        });
+
+        //For Search
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                dailyMealAdapter.getFilter().filter(newText);
+                return true;
+            }
         });
     }
 }

@@ -1,7 +1,6 @@
 package com.example.flavorioapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,19 +31,9 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.imageView.setImageResource(list.get(holder.getAdapterPosition()).getImage());
-        holder.name.setText(list.get(holder.getAdapterPosition()).getName());
-        holder.description.setText(list.get(holder.getAdapterPosition()).getDescription());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, DetailedDailyMealActivity.class);
-                intent.putExtra("type", list.get(holder.getAdapterPosition()).getType());
-                context.startActivity(intent);
-
-            }
-        });
+        holder.imageView.setImageResource(list.get(position).getImage());
+        holder.name.setText(list.get(position).getName());
+        holder.description.setText(list.get(position).getDescription());
     }
 
     @Override

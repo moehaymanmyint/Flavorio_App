@@ -28,9 +28,6 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".Search"
-            android:exported="false" />
-        <activity
             android:name=".Favourite"
             android:exported="false" />
         <activity

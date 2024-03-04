@@ -36,11 +36,6 @@ public class RecipeList extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;
-            } else if (item.getItemId() == R.id.bottom_search) {
-                startActivity(new Intent(getApplicationContext(), Search.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                finish();
-                return true;
             } else if (item.getItemId() == R.id.bottom_favourite) {
                 startActivity(new Intent(getApplicationContext(), Favourite.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

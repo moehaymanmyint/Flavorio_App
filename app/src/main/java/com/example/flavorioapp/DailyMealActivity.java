@@ -26,13 +26,11 @@ public class DailyMealActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dailyMealModels = new ArrayList<>();
 
-        dailyMealModels.add(new DailyMealModel(R.drawable.chocolate,"Chocolate Cake","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.shrimp,"Shrimp Recipe","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack3,"Snacks","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.drink1,"Drink","Description Description Description"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.drink2,"Drink","Description Description Description"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.chocolate,"Chocolate Cake","Description Description Description","Breakfast"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.shrimp,"Shrimp Recipe","Description Description Description","Lunch"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Description Description Description", "Dinner"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Description Description Description", "Snacks"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack3,"Snacks","Description Description Description", "Coffee"));
 
         dailyMealAdapter = new DailyMealAdapter(this, dailyMealModels);
         recyclerView.setAdapter(dailyMealAdapter);

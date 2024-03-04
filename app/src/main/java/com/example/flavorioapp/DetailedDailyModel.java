@@ -1,17 +1,17 @@
 package com.example.flavorioapp;
 
-public class DailyMealModel {
+public class DetailedDailyModel {
 
     int image;
     String name;
     String description;
-    String type;
+    String rating;
 
-    public DailyMealModel(int image, String name, String description, String type) {
+    public DetailedDailyModel(int image, String name, String description, String rating) {
         this.image = image;
         this.name = name;
         this.description = description;
-        this.type = type;
+        this.rating = rating;
     }
 
     public int getImage() {
@@ -38,11 +38,11 @@ public class DailyMealModel {
         this.description = description;
     }
 
-    public String getType() {
-        return type;
+    public String getRating() {
+        return rating;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 }

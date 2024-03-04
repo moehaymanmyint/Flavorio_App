@@ -5,7 +5,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +36,10 @@ public class Profile extends AppCompatActivity {
             String username = intent.getStringExtra("USERNAME");
             user_name.setText("Welcome, \n" + username);
         } else {
-            user_name.setText("Unable to retrieve username");
+            // Retrieve the username from SharedPreferences
+            SharedPreferences sharedPref = getSharedPreferences("user_details", Context.MODE_PRIVATE);
+            String username = sharedPref.getString("username", "Unable to retrieve username");
+            user_name.setText("Welcome, \n" + username);
         }
 
         logout_btn.setOnClickListener(new View.OnClickListener() {

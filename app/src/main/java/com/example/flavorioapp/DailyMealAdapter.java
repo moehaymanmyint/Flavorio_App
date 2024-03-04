@@ -2,6 +2,7 @@ package com.example.flavorioapp;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.media.RouteListingPreference;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -89,6 +90,15 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
         holder.name.setText(filteredDailyMealModels.get(position).getName());
         holder.description.setText(filteredDailyMealModels.get(position).getDescription());
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailedDailyMealActivity.class);
+                intent.putExtra("type", dailyMealModels.get(holder.getAdapterPosition()).getType());
+                context.startActivity(intent);
+
+            }
+        });
     }
 
     @Override

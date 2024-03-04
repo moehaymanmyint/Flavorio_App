@@ -29,9 +29,11 @@ public class DailyMealActivity extends AppCompatActivity {
 
         dailyMealModels.add(new DailyMealModel(R.drawable.chocolate,"Chocolate Cake","Description Description Description","Breakfast"));
         dailyMealModels.add(new DailyMealModel(R.drawable.shrimp,"Shrimp Recipe","Description Description Description","Lunch"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Description Description Description", "Dinner"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Description Description Description", "Snacks"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Description Description Description","Dinner"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Description Description Description","Snacks"));
         dailyMealModels.add(new DailyMealModel(R.drawable.snack3,"Snacks","Description Description Description", "Coffee"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.drink1,"Drink","Description Description Description", "Drinks"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.drink2,"Drink","Description Description Description","Dessert"));
 
         dailyMealAdapter = new DailyMealAdapter(this, dailyMealModels);
         recyclerView.setAdapter(dailyMealAdapter);

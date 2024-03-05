@@ -1,10 +1,6 @@
 package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,6 +28,7 @@ public class Profile extends AppCompatActivity {
         user_name = findViewById(R.id.user_name);
 
         Intent intent = getIntent();
+
         if (intent != null && intent.hasExtra("USERNAME")) {
             String username = intent.getStringExtra("USERNAME");
             user_name.setText("Welcome, \n" + username);

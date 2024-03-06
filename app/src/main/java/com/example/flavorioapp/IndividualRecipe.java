@@ -4,20 +4,38 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.List;
 
 public class IndividualRecipe extends AppCompatActivity {
 
-    ImageView imageView;
+    private TextView nameTextView;
+    private TextView descriptionTextView;
+    private ImageView imageView;
+    private TextView timeTextView;
+    private TextView recipeTypeTextView;
+    private TextView ingredientsTextView;
+    private TextView instructionsTextView;
+
     // Initialize RecipeDatabaseHelper
-    RecipeDatabaseHelper recipeDatabaseHelper = new RecipeDatabaseHelper(this);
+    RecipeDatabaseHelper recipeDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_individual_recipe);
 
+        nameTextView = findViewById(R.id.recipe_name);
+        descriptionTextView = findViewById(R.id.recipe_des);
+        timeTextView = findViewById(R.id.recipe_time);
+        recipeTypeTextView = findViewById(R.id.recipe_type);
+        ingredientsTextView = findViewById(R.id.ingredients);
+        instructionsTextView = findViewById(R.id.instructions);
+
         imageView = findViewById(R.id.recipe_image);
+        recipeDatabaseHelper = new RecipeDatabaseHelper(this);
 
         String type = getIntent().getStringExtra("type");
 
@@ -37,43 +55,41 @@ public class IndividualRecipe extends AppCompatActivity {
             } else if (type.equalsIgnoreCase("beef5")) {
                 // Set image resource for coffee
                 imageView.setImageResource(R.drawable.snack3);
+            } else if (type.equalsIgnoreCase("chicken1")) {
+                // Retrieve recipe details
+                int image = R.drawable.snack2; // Example image resource
+                String recipeName = "Chicken Curry";
+                String recipeDescription = "Yummy";
+                String recipeTime = "20mnt";
+                String recipeType = "Medium";
+                String recipeIngredients = getResources().getString(R.string.curry1_ingredients); // Retrieve string resource
+                String recipeInstructions = "Recipe Instructions";
+
+                // Create a new IndividualRecipeModel object
+                IndividualRecipeModel recipe = new IndividualRecipeModel(1, image, recipeName, recipeDescription, recipeTime, recipeType, recipeIngredients, recipeInstructions);
+
+                // Insert the recipe into the database and get the ID of the inserted row
+                long recipeId = recipeDatabaseHelper.addRecipe(recipe);
+
+                Toast.makeText(IndividualRecipe.this, "Recipe added with ID: " + recipeId, Toast.LENGTH_SHORT).show();
+
+                // Retrieve the added recipe from the database and display it on the interface
+                List<IndividualRecipeModel> recipeList = recipeDatabaseHelper.getAllRecipes();
+                for (IndividualRecipeModel addedRecipe : recipeList) {
+                    if (addedRecipe.getName().equals(recipeName) && addedRecipe.getDescription().equals(recipeDescription)) {
+                        // This is the recipe you just added
+                        // Use its details to populate your interface
+                        imageView.setImageResource(addedRecipe.getImage());
+                        nameTextView.setText(addedRecipe.getName());
+                        descriptionTextView.setText(addedRecipe.getDescription());
+                        timeTextView.setText(addedRecipe.getTime());
+                        recipeTypeTextView.setText(addedRecipe.getRecipe_type());
+                        ingredientsTextView.setText(addedRecipe.getIngredients());
+                        instructionsTextView.setText(addedRecipe.getInstructions());
+                        break; // Exit the loop once you find the recipe
+                    }
+                }
             }
-        }
-
-        if (type != null && type.equalsIgnoreCase("chicken1")){
-            // Retrieve recipe details
-            int image = R.drawable.snack1; // Example image resource
-            String name = "Chicken Curry";
-            String description = "Yummy";
-            String time = "20mnt";
-            String recipeType = "Medium";
-            String ingredients = "List of Ingredients";
-            String instructions = "Recipe Instructions";
-
-            // Create a new IndividualRecipeModel object
-            IndividualRecipeModel recipe = new IndividualRecipeModel(0, R.drawable.snack1, "Chicken Curry", "Yummy", "20mnt", "Medium", "List of Ingredients", "Recipe Instructions");
-
-            // Insert the recipe into the database and get the ID of the inserted row
-            long recipeId = recipeDatabaseHelper.addRecipe(recipe);
-
-            Toast.makeText(IndividualRecipe.this, "Recipe added with ID: " + recipeId, Toast.LENGTH_SHORT).show();
-
-        }
-
-
-        if (type != null && type.equalsIgnoreCase("chicken2")){
-            // Update an existing recipe
-            IndividualRecipeModel recipeToUpdate = new IndividualRecipeModel(0, R.drawable.chicken, "Chicken Curry", "newDescription", "15mnt", "Easy", "newIngredients", "newInstructions");
-            boolean isUpdated = recipeDatabaseHelper.updateRecipe(recipeToUpdate);
-
-            if (isUpdated) {
-                // Update successful, perform any necessary actions
-                Toast.makeText(IndividualRecipe.this, "Recipe updated successfully", Toast.LENGTH_SHORT).show();
-            } else {
-                // Update failed, handle accordingly
-                Toast.makeText(IndividualRecipe.this, "Failed to update recipe", Toast.LENGTH_SHORT).show();
-            }
-
         }
     }
 }

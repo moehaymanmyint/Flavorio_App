@@ -1,17 +1,15 @@
 package com.example.flavorioapp;
 
-import android.widget.ImageView;
-
 public class IndividualRecipeModel {
 
-    private long id; // Add a field to hold the ID
-    int image;
-    String name;
-    String description;
-    String time;
-    String recipe_type;
-    String ingredients;
-    String instructions;
+    private long id;
+    private int image;
+    private String name;
+    private String description;
+    private String time;
+    private String recipe_type;
+    private String ingredients;
+    private String instructions;
 
     public IndividualRecipeModel(long id, int image, String name, String description, String time, String recipe_type, String ingredients, String instructions) {
         this.id = id;
@@ -23,6 +21,8 @@ public class IndividualRecipeModel {
         this.ingredients = ingredients;
         this.instructions = instructions;
     }
+
+    // Getters and setters for all fields
 
     public long getId() {
         return id;

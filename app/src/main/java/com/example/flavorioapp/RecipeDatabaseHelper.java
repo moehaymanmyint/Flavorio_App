@@ -11,8 +11,8 @@ import java.util.List;
 
 public class RecipeDatabaseHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "RecipeDB";
+    private static final int DATABASE_VERSION = 3;
+    private static final String DATABASE_NAME = "RecipeDB.db";
     private static final String TABLE_NAME = "Recipes";
 
     private static final String COLUMN_ID = "id";

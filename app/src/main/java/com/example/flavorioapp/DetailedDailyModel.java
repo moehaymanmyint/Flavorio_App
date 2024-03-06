@@ -7,11 +7,14 @@ public class DetailedDailyModel {
     String description;
     String rating;
 
-    public DetailedDailyModel(int image, String name, String description, String rating) {
+    String type;
+
+    public DetailedDailyModel(int image, String name, String description, String rating, String type) {
         this.image = image;
         this.name = name;
         this.description = description;
         this.rating = rating;
+        this.type = type;
     }
 
     public int getImage() {
@@ -44,5 +47,13 @@ public class DetailedDailyModel {
 
     public void setRating(String rating) {
         this.rating = rating;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

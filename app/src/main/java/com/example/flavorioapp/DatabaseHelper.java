@@ -6,9 +6,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import java.util.List;
-import java.util.ArrayList;
-
 
 import androidx.annotation.Nullable;
 
@@ -16,7 +13,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //Initialize variables
     private static final String DATABASE_NAME = "user.db";
-    private static final int DATABASE_VERSION = 1;
     private static final String TABLE_NAME = "users";
     private static final String COL_1 = "ID";
     private static final String COL_2 = "username";
@@ -72,6 +68,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return false;
     }
-
 }
 

@@ -2,10 +2,9 @@ package com.example.flavorioapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Binder;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +47,19 @@ public class SignUp extends AppCompatActivity {
                             Boolean insert = databaseHelper.insertData(user, pass, eml);
                             if (insert == true) {
                                 Toast.makeText(SignUp.this, "Registered successfully", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(getApplicationContext(), RecipeList.class);
+
+                                // Save the username in SharedPreferences
+                                SharedPreferences sharedPref = getSharedPreferences("user_details", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPref.edit();
+                                editor.putString("username", user);
+                                editor.apply();
+
+                                // Get the username after registration
+                                String user_name = username.getText().toString();
+
+                                // Start the Profile activity with the intent and pass the username
+                                Intent intent = new Intent(getApplicationContext(), Profile.class);
+                                intent.putExtra("USERNAME", user_name);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(SignUp.this, "Sign Up Failed", Toast.LENGTH_SHORT).show();

@@ -82,7 +82,6 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         holder.imageView.setImageResource(filteredDailyMealModels.get(position).getImage());
         holder.name.setText(filteredDailyMealModels.get(position).getName());
         holder.description.setText(filteredDailyMealModels.get(position).getDescription());
@@ -105,13 +104,11 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
         ImageView imageView;
         TextView name, description;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             imageView = itemView.findViewById(R.id.imageview);
             name = itemView.findViewById(R.id.textView37);
             description = itemView.findViewById(R.id.instructions_title);

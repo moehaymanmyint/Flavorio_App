@@ -77,13 +77,15 @@
                 <Button
                     android:layout_width="105dp"
                     android:layout_height="50dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="16dp"
                     android:background="@drawable/bg_shape_2"
+                    android:drawableLeft="@drawable/favourite"
                     android:fontFamily="@font/libre_baskerville"
-                    android:text="See More"
+                    android:text="Add to\nFavourite"
                     android:textAllCaps="false"
                     android:textSize="10sp"
                     android:textStyle="bold"
+                    android:paddingLeft="5dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

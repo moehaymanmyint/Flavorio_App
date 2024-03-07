@@ -24,6 +24,15 @@ public class AdminDashboard extends AppCompatActivity {
         deleteBtn = findViewById(R.id.deleteBtn);
         logoutBtn = findViewById(R.id.logoutBtn);
 
+        // Set OnClickListener for addBtn
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start AddRecipeItem activity
+                startActivity(new Intent(AdminDashboard.this, AddRecipeItem.class));
+            }
+        });
+
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

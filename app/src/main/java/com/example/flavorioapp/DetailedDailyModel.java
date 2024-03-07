@@ -56,4 +56,7 @@ public class DetailedDailyModel {
     public void setType(String type) {
         this.type = type;
     }
+
+    public void setId(int id) {
+    }
 }

@@ -35,7 +35,6 @@ public class AdminDashboard extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start AddRecipeItem activity
                 startActivity(new Intent(AdminDashboard.this, AddRecipeItem.class));
             }
         });
@@ -44,7 +43,6 @@ public class AdminDashboard extends AppCompatActivity {
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Start Update Recipe Item Activity
                 startActivity(new Intent(AdminDashboard.this, UpdateRecipeItem.class));
             }
         });
@@ -53,7 +51,6 @@ public class AdminDashboard extends AppCompatActivity {
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Start Delete Recipe Item Activity
                 startActivity(new Intent(AdminDashboard.this, DeleteRecipeItem.class));
             }
         });
@@ -67,7 +64,6 @@ public class AdminDashboard extends AppCompatActivity {
             }
         });
 
-        // Move viewAll() method call to onCreate() method to ensure it's called only once
         viewAll();
     }
 
@@ -75,9 +71,8 @@ public class AdminDashboard extends AppCompatActivity {
         viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<IndividualRecipeModel> recipeList = myDb.getAllRecipes(); // Retrieve recipe list
+                List<IndividualRecipeModel> recipeList = myDb.getAllRecipes();
                 if(recipeList.isEmpty()) {
-                    // Show message if the recipe list is empty
                     showMessage("Error", "No recipes found.");
                     return;
                 }

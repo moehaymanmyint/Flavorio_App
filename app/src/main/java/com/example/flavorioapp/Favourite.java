@@ -24,7 +24,6 @@ public class Favourite extends AppCompatActivity {
     private FavouriteAdapter favouriteAdapter;
     private List<DetailedDailyModel> favouriteList;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +32,11 @@ public class Favourite extends AppCompatActivity {
         recyclerView = findViewById(R.id.favouriteRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Initialize your list of favorites
         favouriteList = new ArrayList<>();
 
-        // Populate the list from the database
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
         favouriteList.addAll(databaseHelper.getAllFavoriteData());
 
-        // Initialize and set up the RecyclerView adapter
         favouriteAdapter = new FavouriteAdapter(favouriteList, this);
         recyclerView.setAdapter(favouriteAdapter);
 

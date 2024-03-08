@@ -83,10 +83,8 @@ public class DetailedDailyAdapter extends RecyclerView.Adapter<DetailedDailyAdap
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     if (position != RecyclerView.NO_POSITION) {
-                        // Get the selected model
                         DetailedDailyModel selectedModel = detailedDailyModelList.get(position);
 
-                        // Add the selected model to favorites
                         DatabaseHelper databaseHelper = new DatabaseHelper(itemView.getContext());
                         boolean isInserted = databaseHelper.insertFavData(
                                 String.valueOf(Integer.parseInt(String.valueOf(selectedModel.getImage()))),
@@ -95,7 +93,6 @@ public class DetailedDailyAdapter extends RecyclerView.Adapter<DetailedDailyAdap
                                 selectedModel.getRating()
                         );
 
-                        // Provide feedback to the user
                         if (isInserted) {
                             Toast.makeText(itemView.getContext(), "Added to Favorites", Toast.LENGTH_SHORT).show();
                         } else {

@@ -5,7 +5,7 @@ import android.provider.BaseColumns;
 public class RecipeContract {
 
     private RecipeContract() {
-        // Private constructor to prevent instantiation
+
     }
 
     public static final class RecipeEntry implements BaseColumns {

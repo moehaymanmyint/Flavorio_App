@@ -59,7 +59,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    // For Fav
+    // For Favourite
     public boolean insertFavData(String image, String name, String description, String rating) {
         SQLiteDatabase MyDatabase = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

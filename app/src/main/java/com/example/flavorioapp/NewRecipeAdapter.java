@@ -14,9 +14,8 @@ import java.util.List;
 public class NewRecipeAdapter extends RecyclerView.Adapter<NewRecipeAdapter.RecipeViewHolder> {
 
     private List<IndividualRecipeModel> recipeList;
-    private OnRecipeItemClickListener listener; // Listener for item clicks
+    private OnRecipeItemClickListener listener;
 
-    // Interface for item click events
     public interface OnRecipeItemClickListener {
         void onRecipeItemClick(int itemId);
     }
@@ -24,7 +23,7 @@ public class NewRecipeAdapter extends RecyclerView.Adapter<NewRecipeAdapter.Reci
     // Constructor
     public NewRecipeAdapter(List<IndividualRecipeModel> recipeList, OnRecipeItemClickListener listener) {
         this.recipeList = recipeList;
-        this.listener = listener; // Initialize listener with the provided instance
+        this.listener = listener;
     }
 
     @NonNull
@@ -42,7 +41,6 @@ public class NewRecipeAdapter extends RecyclerView.Adapter<NewRecipeAdapter.Reci
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if listener is not null and handle click event
                 if (listener != null) {
                     listener.onRecipeItemClick(position);
                 }

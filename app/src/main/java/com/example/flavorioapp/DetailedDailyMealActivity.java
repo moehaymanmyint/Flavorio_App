@@ -32,7 +32,6 @@ public class DetailedDailyMealActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         detailedDailyModelList = new ArrayList<>();
-        // Initialize DetailedDailyAdapter with context
         detailedDailyAdapter = new DetailedDailyAdapter(detailedDailyModelList, this);
         recyclerView.setAdapter(detailedDailyAdapter);
 

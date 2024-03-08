@@ -48,7 +48,7 @@
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintStart_toStartOf="@id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/new_image"
@@ -60,7 +60,8 @@
                     app:layout_constraintTop_toTopOf="@+id/button4"
                     app:layout_constraintVertical_bias="0.315"
                     app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/chicken" />
+                    app:srcCompat="@drawable/chicken"
+                    android:scaleType="centerCrop"/>
 
                 <TextView
                     android:id="@+id/button4"
@@ -128,7 +129,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="5dp"
@@ -159,7 +159,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/fork_and_spoon_1" />
+                        app:srcCompat="@drawable/fork_and_spoon_1"/>
 
                     <TextView
                         android:id="@+id/textView15"
@@ -174,6 +174,7 @@
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.503"
                         app:layout_constraintStart_toEndOf="@+id/imageView7"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>

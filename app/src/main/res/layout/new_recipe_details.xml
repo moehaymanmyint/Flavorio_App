@@ -29,7 +29,7 @@
                     app:layout_constraintStart_toEndOf="@+id/new_type"
                     app:layout_constraintTop_toTopOf="@+id/new_time"
                     app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/chicken" />
+                    app:srcCompat="@drawable/default_img4" />
 
                 <TextView
                     android:id="@+id/new_favourite"
@@ -164,7 +164,9 @@
                     android:id="@+id/new_instructions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="15dp"
                     android:text="- Instructions"
@@ -172,6 +174,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/constraintLayout10"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout10" />
 
@@ -218,7 +221,9 @@
                     android:id="@+id/new_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="15dp"
                     android:text="- Ingredients"
@@ -226,6 +231,7 @@
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
             </androidx.constraintlayout.widget.ConstraintLayout>

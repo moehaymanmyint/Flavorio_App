@@ -16,7 +16,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_margin="15dp"
-            android:src="@drawable/chocolate"
+            android:src="@drawable/default_img3"
             app:shapeAppearanceOverlay="@style/circular_1"
             android:scaleType="centerCrop"/>
 

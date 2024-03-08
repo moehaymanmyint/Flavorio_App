@@ -121,7 +121,8 @@
                     app:layout_constraintTop_toTopOf="@+id/recipe_time"
                     app:layout_constraintVertical_bias="0.714"
                     app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/drink1" />
+                    app:srcCompat="@drawable/drink1"
+                    android:scaleType="centerCrop"/>
 
                 <TextView
                     android:layout_width="wrap_content"

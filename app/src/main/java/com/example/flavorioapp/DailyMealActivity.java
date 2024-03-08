@@ -26,13 +26,13 @@ public class DailyMealActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dailyMealModels = new ArrayList<>();
 
-        dailyMealModels.add(new DailyMealModel(R.drawable.chocolate,"Chocolate Cake","Description Description Description","Breakfast"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.shrimp,"Shrimp Recipe","Description Description Description","Lunch"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack1,"Snacks","Description Description Description","Dinner"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack2,"Snacks","Description Description Description","Snacks"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.snack3,"Snacks","Description Description Description", "Coffee"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.drink1,"Drink","Description Description Description", "Drinks"));
-        dailyMealModels.add(new DailyMealModel(R.drawable.drink2,"Drink","Description Description Description","Dessert"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.beef1,"Beef","Tasty and Nutritious","beef"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.chicken1,"Chicken","Tasty and Nutritious","chicken"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.fish1,"Fish","Tasty and Nutritious","fish"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.shrimp1,"Shrimp","Tasty and Nutritious","shrimp"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.duck1,"Duck","Tasty and Nutritious", "duck"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.cake1,"Dessert","Tasty and Nutritious", "dessert"));
+        dailyMealModels.add(new DailyMealModel(R.drawable.juice1,"Drink","Tasty Treat","juice"));
 
         dailyMealAdapter = new DailyMealAdapter(this, dailyMealModels);
         recyclerView.setAdapter(dailyMealAdapter);

@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:text="Green Curry Shrimp might be a suitable \nrecipe for your lunch and dinner."
+                    android:text="Green Curry Shrimp might be\na suitable recipe for your\nlunch and dinner."
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -51,16 +51,18 @@
                     app:layout_constraintStart_toStartOf="@+id/textView8"
                     app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-                <Button
+                <TextView
                     android:id="@+id/button7"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="32dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/time_1"
+                    android:elevation="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="TIME
-                    20mnt"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="Time\n30mnt"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
@@ -69,16 +71,18 @@
                     app:layout_constraintStart_toStartOf="@+id/textView10"
                     app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-                <Button
+                <TextView
                     android:id="@+id/button8"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/type"
+                    android:elevation="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="TYPE
-                    Medium"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="TYPE\nEasy"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
@@ -88,23 +92,26 @@
                     app:layout_constraintStart_toStartOf="@+id/button7"
                     app:layout_constraintTop_toBottomOf="@+id/button7" />
 
-                <Button
+                <TextView
                     android:id="@+id/button9"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:background="@drawable/bg_shape"
                     android:drawableLeft="@drawable/favourite"
+                    android:elevation="10dp"
                     android:fontFamily="sans-serif"
-                    android:text="Favourite"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="Add to\nFavourite"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/button8"
                     app:layout_constraintStart_toStartOf="@+id/button8"
-                    app:layout_constraintTop_toBottomOf="@+id/button8" />
+                    app:layout_constraintTop_toBottomOf="@+id/button8"/>
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imageView3"
@@ -115,53 +122,48 @@
                     app:layout_constraintStart_toEndOf="@+id/button8"
                     app:layout_constraintTop_toTopOf="@+id/button7"
                     app:shapeAppearanceOverlay="@style/circular"
-                    app:srcCompat="@drawable/shrimp" />
+                    app:srcCompat="@drawable/shrimp"
+                    android:scaleType="centerCrop"/>
 
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
-                    android:text=" - 1/2 tsp cumin\n\n
-- 1/2 tsp cinnamon\n\n
-- 1/2 tsp ground cloves\n\n
-- 1/2 tsp ground cardamom\n\n
-- 1/2 tsp ground black pepper\n\n
-- 1/2 tsp chili powder\n\n
-- 1/2 tsp salt\n\n
-- 1/2 tsp ground turmeric\n\n
-- 1 lb skinless, boneless chicken breast,\n   cut into 1-inch pieces (you can substitute \n   for thighs)\n\n
-- 2 Tsp olive oil, divided\n\n
-- 3/4 cup of chopped onion \n   (from one medium onion)\n\n
-- 5 cloves garlic, minced\n\n
-- 2 jalapeno peppers, minced \n\n
-  (remove seeds if you want to cut down \n\n
-   on heat in dish) \n\n
-- 114 oz can coconut milk\n\n
-- 1 tsp Worcestershire sauce\n\n"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="15dp"
+                    android:text="@string/curry1_ingredients"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout3"
-                    android:layout_width="350dp"
+                    android:layout_width="345dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/button9">
+                    android:elevation="30dp"
+                    app:layout_constraintStart_toStartOf="@+id/button9"
+                    app:layout_constraintTop_toBottomOf="@id/button9">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
 
                     <TextView
-                        android:id="@+id/textView11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="24dp"
                         android:fontFamily="@font/libre_baskerville"
                         android:text="Ingredients"
                         android:textAlignment="center"
@@ -169,9 +171,62 @@
                         android:textSize="22sp"
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout12"
+                    android:layout_width="345dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_shape_1"
+                    android:elevation="30dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+                    app:layout_constraintTop_toBottomOf="@id/textView12">
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Instructions"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.503"
+                        app:layout_constraintStart_toEndOf="@+id/imageView21"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/curry1_instructions"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout12"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout12" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

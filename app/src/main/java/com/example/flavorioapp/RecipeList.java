@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,10 +16,14 @@ import java.util.List;
 
 public class RecipeList extends AppCompatActivity implements NewRecipeAdapter.OnRecipeItemClickListener {
 
+    //Declaration of variables
     private RecyclerView recyclerView;
     private List<IndividualRecipeModel> recipeList = new ArrayList<>();
     private NewRecipeAdapter newRecipeAdapter;
     private RecipeDatabaseHelper dbHelper;
+    private CardView curryId1, curryId2, curryId3, cakeId1, cakeId2, cakeId3,
+    snackId1, snackId2, snackId3, drinkId1, drinkId2, drinkId3;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,34 @@ public class RecipeList extends AppCompatActivity implements NewRecipeAdapter.On
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         newRecipeAdapter = new NewRecipeAdapter(recipeList, this); // Pass 'this' as the listener
         recyclerView.setAdapter(newRecipeAdapter);
+
+        //Linking card view variables
+        curryId1 = findViewById(R.id.curryId1);
+        curryId2 = findViewById(R.id.curryId2);
+        curryId3 = findViewById(R.id.curryId3);
+        cakeId1 = findViewById(R.id.cakeId1);
+        cakeId2 = findViewById(R.id.cakeId2);
+        cakeId3 = findViewById(R.id.cakeId3);
+        snackId1 = findViewById(R.id.snackId1);
+        snackId2 = findViewById(R.id.snackId2);
+        snackId3 = findViewById(R.id.snackId3);
+        drinkId1 = findViewById(R.id.drinkId1);
+        drinkId2 = findViewById(R.id.drinkId2);
+        drinkId3 = findViewById(R.id.drinkId3);
+
+        //Calling methods for onClick View
+        openRecipeInfo1();
+        openRecipeInfo2();
+        openRecipeInfo3();
+        openCakeRecipe1();
+        openCakeRecipe2();
+        openCakeRecipe3();
+        openSnackRecipe1();
+        openSnackRecipe2();
+        openSnackRecipe3();
+        openDrinkRecipe1();
+        openDrinkRecipe2();
+        openDrinkRecipe3();
 
         //Bottom Navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -81,32 +114,115 @@ public class RecipeList extends AppCompatActivity implements NewRecipeAdapter.On
         intent.putExtra("Type", clickedRecipe.getRecipe_type());
         intent.putExtra("Ingredients", clickedRecipe.getIngredients());
         intent.putExtra("Instructions", clickedRecipe.getInstructions());
-        // Add other necessary data...
         startActivity(intent);
     }
 
     // Add onClick methods for card views to open recipe details
-    public void openRecipeInfo1(View view) {
-        // Implement your logic here
+    public void openRecipeInfo1() {
+        curryId1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, RecipeInfo_1.class));
+            }
+        });
     }
 
-    public void openRecipeInfo2(View view) {
-        // Implement your logic here
+    public void openRecipeInfo2() {
+        curryId2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, RecipeInfo_2.class));
+            }
+        });
     }
 
-    public void openRecipeInfo3(View view) {
-        // Implement your logic here
+    public void openRecipeInfo3() {
+        curryId3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, RecipeInfo_3.class));
+            }
+        });
     }
 
-    public void openCakeRecipe1(View view) {
-        // Implement your logic here
+    public void openCakeRecipe1() {
+        cakeId1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, CakeRecipe_1.class));
+            }
+        });
     }
 
-    public void openSnackRecipe1(View view) {
-        // Implement your logic here
+    public void openCakeRecipe2() {
+        cakeId2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, CakeRecipe_2.class));
+            }
+        });
     }
 
-    public void openDrinkRecipe1(View view) {
-        // Implement your logic here
+    public void openCakeRecipe3() {
+        cakeId3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, CakeRecipe_3.class));
+            }
+        });
+    }
+
+    public void openSnackRecipe1() {
+        snackId1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, SnackRecipe_1.class));
+            }
+        });
+    }
+
+    public void openSnackRecipe2() {
+        snackId2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, SnackRecipe_2.class));
+            }
+        });
+    }
+
+    public void openSnackRecipe3() {
+        snackId3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, SnackRecipe_3.class));
+            }
+        });
+    }
+
+    public void openDrinkRecipe1() {
+        drinkId1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, DrinkRecipe_1.class));
+            }
+        });
+    }
+
+    public void openDrinkRecipe2() {
+        drinkId2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, DrinkRecipe_2.class));
+            }
+        });
+    }
+
+    public void openDrinkRecipe3() {
+        drinkId3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RecipeList.this, DrinkRecipe_3.class));
+            }
+        });
     }
 }

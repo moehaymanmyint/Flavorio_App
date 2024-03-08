@@ -1,20 +1,19 @@
 package com.example.flavorioapp;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeList extends AppCompatActivity {
+public class RecipeList extends AppCompatActivity implements NewRecipeAdapter.OnRecipeItemClickListener {
 
     private RecyclerView recyclerView;
     private List<IndividualRecipeModel> recipeList = new ArrayList<>();
@@ -30,9 +29,10 @@ public class RecipeList extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.newrecipe_rec);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        newRecipeAdapter = new NewRecipeAdapter(recipeList);
+        newRecipeAdapter = new NewRecipeAdapter(recipeList, this); // Pass 'this' as the listener
         recyclerView.setAdapter(newRecipeAdapter);
 
+        //Bottom Navigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_home);
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -66,6 +66,23 @@ public class RecipeList extends AppCompatActivity {
         recipeList.clear();
         recipeList.addAll(dbHelper.getAllRecipes());
         newRecipeAdapter.notifyDataSetChanged(); // Notify adapter about dataset change
+    }
+
+    // Implement onRecipeItemClick method from the interface
+    @Override
+    public void onRecipeItemClick(int itemId) {
+        // Handle item click event here
+        IndividualRecipeModel clickedRecipe = recipeList.get(itemId);
+        // Start the details activity and pass necessary data
+        Intent intent = new Intent(this, NewRecipeDetails.class);
+        intent.putExtra("Name", clickedRecipe.getName());
+        intent.putExtra("Description", clickedRecipe.getDescription());
+        intent.putExtra("Time", clickedRecipe.getTime());
+        intent.putExtra("Type", clickedRecipe.getRecipe_type());
+        intent.putExtra("Ingredients", clickedRecipe.getIngredients());
+        intent.putExtra("Instructions", clickedRecipe.getInstructions());
+        // Add other necessary data...
+        startActivity(intent);
     }
 
     // Add onClick methods for card views to open recipe details

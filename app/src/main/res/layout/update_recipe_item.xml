@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddRecipeItem">
+    tools:context=".UpdateRecipeItem">
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/imageView4"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/icon" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,15 +27,42 @@
         android:textColor="#F09127"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
-        app:layout_constraintTop_toTopOf="@+id/imageView13" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/update_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_update"
+        app:shapeAppearanceOverlay="@style/circular_1"
+        app:srcCompat="@drawable/drink1" />
 
     <TextView
-        android:id="@+id/textView33"
+        android:id="@+id/textView41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/libre_baskerville"
+        android:text="ID:"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/libre_baskerville"
         android:text="Name:"
@@ -44,11 +71,11 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintStart_toStartOf="@+id/textView41"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -59,11 +86,11 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView33"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+        app:layout_constraintStart_toStartOf="@+id/textView42"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -74,11 +101,11 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView34"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+        app:layout_constraintStart_toStartOf="@+id/textView44"
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
     <TextView
-        android:id="@+id/textView36"
+        android:id="@+id/textView48"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -89,11 +116,11 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView35"
-        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+        app:layout_constraintStart_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
     <TextView
-        android:id="@+id/textView38"
+        android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -104,11 +131,11 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView36"
-        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+        app:layout_constraintStart_toStartOf="@+id/textView48"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -119,31 +146,32 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView38"
-        app:layout_constraintTop_toBottomOf="@+id/textView38" />
-
-    <Button
-        android:id="@+id/btn_Add"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/logout_btn"
-        android:fontFamily="@font/libre_baskerville"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text="Add Recipe"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+        app:layout_constraintStart_toStartOf="@+id/textView49"
+        app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
     <EditText
-        android:id="@+id/et_recipename"
+        android:id="@+id/updateId"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="88dp"
+        android:ems="10"
+        android:fontFamily="@font/libre_baskerville"
+        android:hint="ID"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView41"
+        app:layout_constraintStart_toEndOf="@+id/textView41"
+        app:layout_constraintTop_toTopOf="@+id/textView41"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <EditText
+        android:id="@+id/update_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/libre_baskerville"
         android:hint="Recipe Name"
@@ -153,50 +181,47 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView33"
-        app:layout_constraintStart_toEndOf="@+id/textView33"
-        app:layout_constraintTop_toTopOf="@+id/textView33" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView42"
+        app:layout_constraintStart_toStartOf="@+id/updateId"
+        app:layout_constraintTop_toTopOf="@+id/textView42" />
 
     <EditText
-        android:id="@+id/et_recipedes"
+        android:id="@+id/update_des"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="10"
         android:fontFamily="@font/libre_baskerville"
         android:hint="Recipe Description"
         android:inputType="text"
-        android:maxLines="@integer/material_motion_duration_long_2"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView34"
-        app:layout_constraintStart_toStartOf="@+id/et_recipename"
-        app:layout_constraintTop_toTopOf="@+id/textView34"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView44"
+        app:layout_constraintStart_toStartOf="@+id/update_name"
+        app:layout_constraintTop_toTopOf="@+id/textView44" />
 
     <EditText
-        android:id="@+id/et_recipetime"
+        android:id="@+id/update_time"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginStart="4dp"
         android:ems="10"
         android:fontFamily="@font/libre_baskerville"
-        android:hint="Time taken"
+        android:hint="Time Taken"
         android:inputType="text"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView35"
-        app:layout_constraintStart_toEndOf="@+id/textView34"
-        app:layout_constraintTop_toTopOf="@+id/textView35"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView43"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/textView43"
+        app:layout_constraintVertical_bias="0.518" />
 
     <EditText
-        android:id="@+id/et_recipetype"
+        android:id="@+id/update_type"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="10"
@@ -208,13 +233,12 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView36"
-        app:layout_constraintStart_toStartOf="@+id/et_recipetime"
-        app:layout_constraintTop_toTopOf="@+id/textView36"
-        app:layout_constraintVertical_bias="0.526" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView48"
+        app:layout_constraintStart_toStartOf="@+id/update_time"
+        app:layout_constraintTop_toTopOf="@+id/textView48" />
 
     <EditText
-        android:id="@+id/et_ingredients"
+        android:id="@+id/update_ingredients"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="10"
@@ -226,13 +250,13 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView38"
-        app:layout_constraintStart_toStartOf="@+id/et_recipetype"
-        app:layout_constraintTop_toTopOf="@+id/textView38"
-        app:layout_constraintVertical_bias="0.7" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView49"
+        app:layout_constraintStart_toStartOf="@+id/update_type"
+        app:layout_constraintTop_toTopOf="@+id/textView49"
+        app:layout_constraintVertical_bias="0.777" />
 
     <EditText
-        android:id="@+id/et_instructions"
+        android:id="@+id/update_instructions"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:ems="10"
@@ -244,7 +268,28 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView39"
-        app:layout_constraintStart_toStartOf="@+id/et_ingredients"
-        app:layout_constraintTop_toTopOf="@+id/textView39" />
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintStart_toStartOf="@+id/update_ingredients"
+        app:layout_constraintTop_toTopOf="@+id/textView46"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/logout_btn"
+        android:fontFamily="@font/libre_baskerville"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Update Recipe"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

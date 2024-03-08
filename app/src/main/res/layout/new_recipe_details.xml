@@ -4,107 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeInfo_1">
+    tools:context=".NewRecipeDetails">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="@font/courgette"
-                    android:text="Coconut Chicken Curry\nwith Vegetables"
-                    android:textAlignment="textStart"
-                    android:textColor="#F09127"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/curry1_description"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@id/textView4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4"/>
-
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/new_image"
                     android:layout_width="175dp"
                     android:layout_height="175dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/button6"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="@+id/new_favourite"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button5"
-                    app:layout_constraintTop_toTopOf="@+id/button4"
-                    app:layout_constraintVertical_bias="0.315"
+                    app:layout_constraintStart_toEndOf="@+id/new_type"
+                    app:layout_constraintTop_toTopOf="@+id/new_time"
                     app:shapeAppearanceOverlay="@style/circular"
                     app:srcCompat="@drawable/chicken" />
 
                 <TextView
-                    android:id="@+id/button4"
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="32dp"
-                    android:background="@drawable/bg_shape"
-                    android:drawableLeft="@drawable/time_1"
-                    android:elevation="10dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="12dp"
-                    android:paddingTop="5dp"
-                    android:text="Time\n30mnt"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textView5"
-                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-                <TextView
-                    android:id="@+id/button5"
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@drawable/bg_shape"
-                    android:drawableLeft="@drawable/type"
-                    android:elevation="10dp"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="12dp"
-                    android:paddingTop="5dp"
-                    android:text="TYPE\nEasy"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/button4"
-                    app:layout_constraintStart_toStartOf="@+id/button4"
-                    app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-                <TextView
-                    android:id="@+id/button6"
+                    android:id="@+id/new_favourite"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
@@ -120,92 +48,93 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/button5"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/button5"
-                    app:layout_constraintTop_toBottomOf="@+id/button5" />
+                    app:layout_constraintEnd_toEndOf="@+id/new_type"
+                    app:layout_constraintStart_toStartOf="@+id/new_type"
+                    app:layout_constraintTop_toBottomOf="@+id/new_type" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="24dp"
-                    android:fontFamily="sans-serif"
-                    android:lineSpacingExtra="5dp"
-                    android:text="@string/curry1_instructions"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout4"
-                    android:layout_width="345dp"
+                    android:id="@+id/new_type"
+                    android:layout_width="140dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/bg_shape_1"
-                    android:elevation="30dp"
-                    app:layout_constraintTop_toBottomOf="@id/textView6"
-                    app:layout_constraintStart_toStartOf="@id/constraintLayout5"
-                    app:layout_constraintEnd_toEndOf="@id/constraintLayout5">
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="16dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/fork_and_spoon_1" />
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp"
-                        android:fontFamily="@font/libre_baskerville"
-                        android:text="Instructions"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold|italic"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView7"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/type"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="TYPE\nEasy"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/new_time"
+                    app:layout_constraintStart_toStartOf="@+id/new_time"
+                    app:layout_constraintTop_toBottomOf="@+id/new_time" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/new_time"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/bg_shape"
+                    android:drawableLeft="@drawable/time_1"
+                    android:elevation="10dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="Time\n30mnt"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/new_des"
+                    app:layout_constraintTop_toBottomOf="@+id/new_des" />
+
+                <TextView
+                    android:id="@+id/new_des"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="16dp"
                     android:fontFamily="sans-serif"
-                    android:lineSpacingExtra="15dp"
-                    android:text="@string/curry1_ingredients"
+                    android:text="Description"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
-                    app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
-                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+                    app:layout_constraintStart_toStartOf="@+id/new_name"
+                    app:layout_constraintTop_toBottomOf="@+id/new_name" />
+
+                <TextView
+                    android:id="@+id/new_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/courgette"
+                    android:text="Name"
+                    android:textAlignment="textStart"
+                    android:textColor="#F09127"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraintLayout5"
+                    android:id="@+id/constraintLayout9"
                     android:layout_width="345dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="40dp"
                     android:background="@drawable/bg_shape_1"
                     android:elevation="30dp"
                     app:layout_constraintEnd_toEndOf="@+id/new_image"
-                    app:layout_constraintStart_toStartOf="@+id/button6"
-                    app:layout_constraintTop_toBottomOf="@+id/button6">
+                    app:layout_constraintStart_toStartOf="@+id/new_favourite"
+                    app:layout_constraintTop_toBottomOf="@+id/new_favourite">
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/imageView14"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginStart="16dp"
@@ -215,7 +144,7 @@
                         app:srcCompat="@drawable/fork_and_spoon_1" />
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/textView45"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="24dp"
@@ -227,10 +156,78 @@
                         android:textStyle="bold|italic"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintStart_toEndOf="@+id/imageView14"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <TextView
+                    android:id="@+id/new_instructions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="15dp"
+                    android:text="- Instructions"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout10"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout10" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout10"
+                    android:layout_width="345dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bg_shape_1"
+                    android:elevation="30dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout9"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
+                    app:layout_constraintTop_toBottomOf="@+id/new_ingredients">
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/libre_baskerville"
+                        android:text="Instructions"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold|italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/fork_and_spoon_1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/new_ingredients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="15dp"
+                    android:text="- Ingredients"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

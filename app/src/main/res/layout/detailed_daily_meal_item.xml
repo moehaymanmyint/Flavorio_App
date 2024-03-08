@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="5dp">
+    android:layout_marginBottom="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,13 +13,12 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/detailed_img"
-            android:layout_width="130dp"
+            android:layout_width="110dp"
             android:layout_height="110dp"
-            android:layout_margin="10dp"
+            android:layout_margin="15dp"
             android:src="@drawable/chocolate"
             app:shapeAppearanceOverlay="@style/circular_1"
-            android:scaleType="centerCrop"
-            app:riv_corner_radius="24dp"/>
+            android:scaleType="centerCrop"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,17 +30,19 @@
                 android:id="@+id/detailed_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/libre_baskerville"
                 android:maxLines="1"
                 android:text="Name"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/detailed_des"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/libre_baskerville"
                 android:maxLines="2"
@@ -51,7 +52,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="15dp">
 
                 <ImageView
                     android:id="@+id/imageView17"
@@ -69,15 +70,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:text="1.4K"
+                    android:textSize="14sp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView17"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:layout_width="105dp"
+                    android:layout_width="110dp"
                     android:layout_height="50dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/bg_shape_2"
                     android:drawableLeft="@drawable/favourite"
                     android:fontFamily="@font/libre_baskerville"

@@ -36,7 +36,6 @@ public class IndividualRecipe extends AppCompatActivity {
 
         imageView = findViewById(R.id.recipe_image);
         recipeDatabaseHelper = new RecipeDatabaseHelper(this);
-
         String type = getIntent().getStringExtra("type");
 
         if (type != null) {

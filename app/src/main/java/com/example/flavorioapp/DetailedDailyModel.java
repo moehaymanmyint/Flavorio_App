@@ -6,7 +6,6 @@ public class DetailedDailyModel {
     String name;
     String description;
     String rating;
-
     String type;
 
     public DetailedDailyModel(int image, String name, String description, String rating, String type) {
@@ -15,6 +14,13 @@ public class DetailedDailyModel {
         this.description = description;
         this.rating = rating;
         this.type = type;
+    }
+
+    public DetailedDailyModel(int image, String name, String description, String rating) {
+        this.image = image;
+        this.name = name;
+        this.description = description;
+        this.rating = rating;
     }
 
     public int getImage() {

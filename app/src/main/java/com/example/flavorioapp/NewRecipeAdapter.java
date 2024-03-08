@@ -1,5 +1,6 @@
 package com.example.flavorioapp;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +14,17 @@ import java.util.List;
 public class NewRecipeAdapter extends RecyclerView.Adapter<NewRecipeAdapter.RecipeViewHolder> {
 
     private List<IndividualRecipeModel> recipeList;
+    private OnRecipeItemClickListener listener; // Listener for item clicks
 
-    public NewRecipeAdapter(List<IndividualRecipeModel> recipeList) {
+    // Interface for item click events
+    public interface OnRecipeItemClickListener {
+        void onRecipeItemClick(int itemId);
+    }
+
+    // Constructor
+    public NewRecipeAdapter(List<IndividualRecipeModel> recipeList, OnRecipeItemClickListener listener) {
         this.recipeList = recipeList;
+        this.listener = listener; // Initialize listener with the provided instance
     }
 
     @NonNull
@@ -26,9 +35,19 @@ public class NewRecipeAdapter extends RecyclerView.Adapter<NewRecipeAdapter.Reci
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecipeViewHolder holder, @SuppressLint("RecyclerView") int position) {
         IndividualRecipeModel recipe = recipeList.get(position);
         holder.bind(recipe);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Check if listener is not null and handle click event
+                if (listener != null) {
+                    listener.onRecipeItemClick(position);
+                }
+            }
+        });
     }
 
     @Override

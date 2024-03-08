@@ -111,10 +111,9 @@ public class RecipeDatabaseHelper extends SQLiteOpenHelper {
         return rowsAffected > 0;
     }
 
-    public void deleteRecipe(long recipeId) {
+    public Integer deleteRecipe(long recipeId) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_NAME, COLUMN_ID + " = ?",
+        return db.delete(TABLE_NAME, COLUMN_ID + " = ?",
                 new String[]{String.valueOf(recipeId)});
-        db.close();
     }
 }

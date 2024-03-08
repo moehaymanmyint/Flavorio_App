@@ -78,6 +78,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
+                    android:id="@+id/addFav"
                     android:layout_width="110dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="20dp"

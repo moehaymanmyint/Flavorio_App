@@ -33,7 +33,6 @@ public class Profile extends AppCompatActivity {
             String username = intent.getStringExtra("USERNAME");
             user_name.setText("Welcome, \n" + username);
         } else {
-            // Retrieve the username from SharedPreferences
             SharedPreferences sharedPref = getSharedPreferences("user_details", Context.MODE_PRIVATE);
             String username = sharedPref.getString("username", "Unable to retrieve username");
             user_name.setText("Welcome, \n" + username);

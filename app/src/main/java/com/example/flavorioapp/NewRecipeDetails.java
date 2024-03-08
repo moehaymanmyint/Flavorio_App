@@ -36,7 +36,6 @@ public class NewRecipeDetails extends AppCompatActivity {
 
         recipeDatabaseHelper = new RecipeDatabaseHelper(this);
 
-        // Get selected Recipe item details from intent
         String Name = getIntent().getStringExtra("Name");
         String Description = getIntent().getStringExtra("Description");
         String Time = getIntent().getStringExtra("Time");
@@ -44,7 +43,6 @@ public class NewRecipeDetails extends AppCompatActivity {
         String Ingredients = getIntent().getStringExtra("Ingredients");
         String Instructions = getIntent().getStringExtra("Instructions");
 
-        // Set details to TextViews
         nameTextView.setText(Name);
         descriptionTextView.setText(Description);
         timeTextView.setText(Time);

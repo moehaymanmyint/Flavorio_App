@@ -33,7 +33,6 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         DetailedDailyModel model = favouriteList.get(position);
 
-        // Set data to views in ViewHolder
         holder.imageView.setImageResource(model.getImage());
         holder.name.setText(model.getName());
         holder.description.setText(model.getDescription());
@@ -59,5 +58,4 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.View
             rating = itemView.findViewById(R.id.detailed_rating);
         }
     }
-
 }

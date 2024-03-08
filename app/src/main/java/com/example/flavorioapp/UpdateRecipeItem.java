@@ -39,7 +39,6 @@ public class UpdateRecipeItem extends AppCompatActivity {
         update_instructions = findViewById(R.id.update_instructions);
         btn_update = findViewById(R.id.btn_update);
 
-        //Call update Recipe Method
         UpdateRecipe();
     }
 
@@ -47,10 +46,8 @@ public class UpdateRecipeItem extends AppCompatActivity {
         btn_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get the data from EditText fields
                 long id = Long.parseLong(updateId.getText().toString());
-                // Set the image resource, assuming update_image is an ImageView displaying the image
-                int image = R.drawable.snack1; // You need to set the image resource here
+                int image = R.drawable.snack1;
                 String name = update_name.getText().toString();
                 String description = update_des.getText().toString();
                 String time = update_time.getText().toString();
@@ -58,18 +55,13 @@ public class UpdateRecipeItem extends AppCompatActivity {
                 String ingredients = update_ingredients.getText().toString();
                 String instructions = update_instructions.getText().toString();
 
-                // Create an IndividualRecipeModel object with updated data
                 IndividualRecipeModel updatedRecipe = new IndividualRecipeModel(id, image, name, description, time, type, ingredients, instructions);
 
-                // Update the recipe in the database
                 boolean isUpdate = myDb.updateRecipe(updatedRecipe);
 
-                // Check if the update was successful
                 if (isUpdate) {
-                    // Handle successful update
                     Toast.makeText(UpdateRecipeItem.this, "Recipe updated successfully", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Handle update failure
                     Toast.makeText(UpdateRecipeItem.this, "Failed to update recipe", Toast.LENGTH_SHORT).show();
                 }
             }

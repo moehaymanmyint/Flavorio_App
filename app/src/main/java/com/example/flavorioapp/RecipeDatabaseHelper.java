@@ -102,12 +102,10 @@ public class RecipeDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_INGREDIENTS, recipe.getIngredients());
         values.put(COLUMN_INSTRUCTIONS, recipe.getInstructions());
 
-        // Updating row
         int rowsAffected = db.update(TABLE_NAME, values, COLUMN_ID + " = ?",
                 new String[]{String.valueOf(recipe.getId())});
         db.close();
 
-        // Return true if at least one row was affected, indicating successful update
         return rowsAffected > 0;
     }
 

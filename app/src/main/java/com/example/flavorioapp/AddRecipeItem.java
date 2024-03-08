@@ -62,8 +62,8 @@ public class AddRecipeItem extends AppCompatActivity {
 
         // Create an IndividualRecipeModel object
         IndividualRecipeModel recipeItem = new IndividualRecipeModel(
-                0, // You can assign a proper ID here if needed
-                0, // You can assign a proper image ID here if needed
+                0,
+                0,
                 nameText,
                 descriptionText,
                 timeText,
@@ -77,7 +77,6 @@ public class AddRecipeItem extends AppCompatActivity {
 
         if (id != -1) {
             Toast.makeText(this, "Recipe added successfully", Toast.LENGTH_SHORT).show();
-            // Clear input fields after successful addition
             name.setText("");
             description.setText("");
             time.setText("");

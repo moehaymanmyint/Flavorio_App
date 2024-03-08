@@ -60,7 +60,7 @@ public class DailyMealAdapter extends RecyclerView.Adapter<DailyMealAdapter.View
     }
     //For Search
     public void filterList(String text) {
-        filteredDailyMealModels = new ArrayList<>(); // Add this line
+        filteredDailyMealModels = new ArrayList<>();
         for (DailyMealModel item : dailyMealModels) {
             if (item.getName().toLowerCase().contains(text.toLowerCase())) {
                 filteredDailyMealModels.add(item);

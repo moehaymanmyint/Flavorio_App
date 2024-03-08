@@ -120,7 +120,114 @@ For the sauce and marinade\n
 4. Top with whipped cream and\n cinnamon or nutmeg if desired.\n\n
 </string>
 
-    <string name="descriptions">
+    <string name="ingredients1">
+        - 1 pound beef top sirloin steak, cut into 1-inch cubes\n
+- 6 tablespoons sesame ginger salad dressing, divided\n
+- 1 tablespoon reduced-sodium soy sauce\n
+- 2 cups chopped fresh pineapple\n
+- 2 medium apples, chopped\n
+- 1 tablespoon sweet chili sauce\n
+- 1 tablespoon lime juice\n
+- 1/4 teaspoon pepper\n
+- 1 tablespoon sesame seeds, toasted\n
+    </string>
 
+    <string name="instructions1">
+        1. In a bowl, toss beef with\n 3 tablespoons dressing and soy sauce;\n let stand 10 minutes. Meanwhile, in\n a large bowl, combine pineapple, apples,\n chili sauce, lime juice and pepper;\n toss to combine.\n\n
+2. Thread beef onto 4 metal or\n soaked wooden skewers; discard remaining marinade.\n
+        3. Grill kabobs, covered, over medium heat\n or broil 4 in. from heat\n until desired doneness, 7-9 minutes, turning\n occasionally; brush generously with remaining dressing\n during the last 3 minutes.\n\n
+        4. Sprinkle with sesame seeds. Serve with\n pineapple mixture.\n\n
+    </string>
+
+    <string name="ingredients2">
+        - 1 pound extra-lean ground beef (95% lean)\n
+- 1 large onion, chopped\n
+- 1-1/4 teaspoons chili powder\n
+- 1 teaspoon dried oregano\n
+- 1/4 teaspoon salt\n
+- 1 can (14-1/2 ounces) diced tomatoes, undrained\n
+- 1 can (8 ounces) tomato sauce\n
+- 1 cup fresh or frozen corn\n
+- 1/2 cup water\n
+- 2/3 cup uncooked elbow macaroni\n
+- 1/2 cup shredded reduced-fat cheddar cheese\n
+    </string>
+
+    <string name="instructions2">
+        1. In a large nonstick skillet, cook\n beef with onion over medium-high heat\n until no longer pink, 5-7\n minutes; crumble meat.\n\n
+2. Stir in seasonings, tomatoes, tomato sauce,\n corn and water; bring to a\n boil. \n\n
+        3. Stir in macaroni. Reduce heat; simmer,\n covered, until macaroni is tender,\n 15-20 minutes, stirring occasionally. \n\n
+        4. Sprinkle with cheese.\n\n
+    </string>
+
+    <string name="ingredients3">
+        - 1 pound medium potatoes, cubed\n
+- 1/2 cup water\n
+- 1 pound ground beef\n
+- 1 medium onion, chopped\n
+- 1 can (15-1/2 ounces) chili starter\n
+- 1 cup frozen peas\n
+- 2 tablespoons minced fresh parsley\n
+- 1/4 teaspoon salt\n
+- Sour cream, optional\n
+    </string>
+
+    <string name="instructions3">
+        1. Place potatoes and water in a\n microwave-safe dish.\n\n
+        2. Cover and microwave on high for\n 7 minutes or until tender.\n\n
+3. Meanwhile, in a large skillet, cook\n beef and onion over medium heat\n until meat is no longer pink;\n drain.\n\n
+        4. Drain potatoes and add to the\n skillet. Stir in the chili starter,\n peas, parsley and salt.\n\n
+        5. Bring to a boil. Reduce heat;\n simmer, uncovered, for 5 minutes.\n\n
+        6. Serve with sour cream if desired.\n\n
+
+    </string>
+
+    <string name="ingredients4">
+        - 1 pound beef stew meat (1-1/4-inch pieces)\n
+- 3/4 pound potatoes (about 2 medium), cut into 3/4-inch cubes\n
+- 2 cups frozen corn (about 10 ounces), thawed\n
+- 2 medium carrots, cut into 1/2-inch slices\n
+- 1 medium onion, chopped\n
+ - 2 garlic cloves, minced\n
+- 1-1/2 teaspoons dried oregano\n
+- 1 teaspoon ground cumin\n
+- 1/2 teaspoon salt\n
+- 1/4 teaspoon crushed red pepper flakes\n
+- 2 cups beef stock\n
+- 1 can (10 ounces) diced tomatoes and green chiles\n
+- Optional: Sour cream and tortilla chips\n
+
+    </string>
+    <string name="instructions4">
+        1. In a 6-qt. electric pressure cooker,\n combine first 12 ingredients.\n\n
+        2. Lock lid; close pressure-release valve.\n Adjust to pressure-cook on high\n for 15 minutes.\n\n
+        3. Allow pressure to naturally release for\n 10 minutes, then quick-release\n any remaining pressure.\n\n
+4. If desired, serve with sour cream\n and chips.\n\n
+
+    </string>
+
+    <string name="ingredients5">
+- 1-1/2 cups uncooked whole wheat penne\n pasta\n
+- 3/4 pound lean ground beef (90% lean)\n
+- 2 tablespoons finely chopped onion\n
+- 1 can (14-1/2 ounces) \nno-salt-added diced tomatoes\n
+- 2 tablespoons dill pickle relish\n
+- 2 tablespoons prepared mustard\n
+- 2 tablespoons ketchup\n
+- 1 teaspoon steak seasoning\n
+- 1/4 teaspoon seasoned salt\n
+- 3/4 cup shredded reduced-fat\n cheddar cheese\n
+- Chopped green onions, optional
+
+    </string>
+    <string name="instructions5">
+1. Cook pasta according to package directions.\n\n
+        2. Meanwhile, in a large skillet,\n cook beef and onion over medium\n heat until meat is no longer\n pink; drain.\n\n
+        3. Drain pasta; add to meat mixture.\n\n
+4. Stir in the tomatoes, relish,\n mustard, ketchup, steak seasoning\n and seasoned salt.\n\n
+        5. Bring to a boil. Reduce heat;\n simmer, uncovered, for 5 minutes.\n\n
+6. Sprinkle with cheese.\n\n
+        7. Remove from the heat; cover and\n let stand until cheese is melted.\n\n
+        8. Garnish with green onions if desired.\n\n
     </string>
 </resources>
